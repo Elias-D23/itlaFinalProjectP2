@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Crud.Infrastructure</id>
+    <version>1.0.0</version>
+    <authors>Crud.Infrastructure</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="eb043dbb48ff0ec04f787b287171fdfa12829026" />
+    <dependencies>
+      <group targetFramework="net8.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\elias\C#Practices\ItlaPracticesP2\Crud.Web-Api\Crud.Infrastucture\bin\Debug\net8.0\Crud.Infrastructure.dll" target="lib\net8.0\Crud.Infrastructure.dll" />
+  </files>
+</package>
