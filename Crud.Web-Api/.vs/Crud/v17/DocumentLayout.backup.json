@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{02C04E9C-5AEC-4851-A7BF-D4F0AD22615F}|Crud.Infrastucture\\Crud.Infrastructure.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.infrastucture\\repositories\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02C04E9C-5AEC-4851-A7BF-D4F0AD22615F}|Crud.Infrastucture\\Crud.Infrastructure.csproj|solutionrelative:crud.infrastucture\\repositories\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE197063-7B01-4F07-9C33-7A863A6A18E5}|Crud.Web\\Crud.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.web\\views\\people\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE197063-7B01-4F07-9C33-7A863A6A18E5}|Crud.Web\\Crud.Web.csproj|solutionrelative:crud.web\\views\\people\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02C04E9C-5AEC-4851-A7BF-D4F0AD22615F}|Crud.Infrastucture\\Crud.Infrastructure.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.infrastucture\\exceptions\\personexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02C04E9C-5AEC-4851-A7BF-D4F0AD22615F}|Crud.Infrastucture\\Crud.Infrastructure.csproj|solutionrelative:crud.infrastucture\\exceptions\\personexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE197063-7B01-4F07-9C33-7A863A6A18E5}|Crud.Web\\Crud.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.web\\views\\people\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE197063-7B01-4F07-9C33-7A863A6A18E5}|Crud.Web\\Crud.Web.csproj|solutionrelative:crud.web\\views\\people\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02C04E9C-5AEC-4851-A7BF-D4F0AD22615F}|Crud.Infrastucture\\Crud.Infrastructure.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.infrastucture\\exceptions\\customerexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02C04E9C-5AEC-4851-A7BF-D4F0AD22615F}|Crud.Infrastucture\\Crud.Infrastructure.csproj|solutionrelative:crud.infrastucture\\exceptions\\customerexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE197063-7B01-4F07-9C33-7A863A6A18E5}|Crud.Web\\Crud.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.web\\views\\people\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE197063-7B01-4F07-9C33-7A863A6A18E5}|Crud.Web\\Crud.Web.csproj|solutionrelative:crud.web\\views\\people\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,48 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PersonRepository.cs",
-              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Repositories\\PersonRepository.cs",
-              "RelativeDocumentMoniker": "Crud.Infrastucture\\Repositories\\PersonRepository.cs",
-              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Repositories\\PersonRepository.cs",
-              "RelativeToolTip": "Crud.Infrastucture\\Repositories\\PersonRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwAUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T02:05:52.797Z",
+              "DocumentIndex": 2,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Views\\People\\List.cshtml",
+              "RelativeDocumentMoniker": "Crud.Web\\Views\\People\\List.cshtml",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Views\\People\\List.cshtml",
+              "RelativeToolTip": "Crud.Web\\Views\\People\\List.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T17:17:05.057Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PersonException.cs",
-              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Exceptions\\PersonException.cs",
-              "RelativeDocumentMoniker": "Crud.Infrastucture\\Exceptions\\PersonException.cs",
-              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Exceptions\\PersonException.cs",
-              "RelativeToolTip": "Crud.Infrastucture\\Exceptions\\PersonException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T01:59:50.672Z"
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Views\\People\\Create.cshtml",
+              "RelativeDocumentMoniker": "Crud.Web\\Views\\People\\Create.cshtml",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Views\\People\\Create.cshtml",
+              "RelativeToolTip": "Crud.Web\\Views\\People\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T17:17:04.098Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomerException.cs",
-              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Exceptions\\CustomerException.cs",
-              "RelativeDocumentMoniker": "Crud.Infrastucture\\Exceptions\\CustomerException.cs",
-              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Exceptions\\CustomerException.cs",
-              "RelativeToolTip": "Crud.Infrastucture\\Exceptions\\CustomerException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T01:57:18.98Z"
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Views\\People\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Crud.Web\\Views\\People\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Views\\People\\Edit.cshtml",
+              "RelativeToolTip": "Crud.Web\\Views\\People\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T17:16:22.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }

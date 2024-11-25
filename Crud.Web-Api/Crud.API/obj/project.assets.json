@@ -1603,6 +1603,20 @@
           "bin/placeholder/Crud.Domain.dll": {}
         }
       },
+      "Crud.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Crud.Common": "1.0.0",
+          "Crud.Persistence": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Crud.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Crud.Infrastructure.dll": {}
+        }
+      },
       "Crud.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -4512,6 +4526,11 @@
       "path": "../Crud.Domain/Crud.Domain.csproj",
       "msbuildProject": "../Crud.Domain/Crud.Domain.csproj"
     },
+    "Crud.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Crud.Infrastucture/Crud.Infrastructure.csproj",
+      "msbuildProject": "../Crud.Infrastucture/Crud.Infrastructure.csproj"
+    },
     "Crud.Persistence/1.0.0": {
       "type": "project",
       "path": "../Crud.Persistence/Crud.Persistence.csproj",
@@ -4522,7 +4541,7 @@
     "net8.0": [
       "Crud.Common >= 1.0.0",
       "Crud.Domain >= 1.0.0",
-      "Crud.Persistence >= 1.0.0",
+      "Crud.Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
       "Swashbuckle.AspNetCore >= 6.6.2"
@@ -4562,8 +4581,8 @@
             "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Domain\\Crud.Domain.csproj": {
               "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Domain\\Crud.Domain.csproj"
             },
-            "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Persistence\\Crud.Persistence.csproj": {
-              "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Persistence\\Crud.Persistence.csproj"
+            "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Crud.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Crud.Infrastructure.csproj"
             }
           }
         }

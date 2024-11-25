@@ -1,3 +1,4 @@
+using Crud.Infrastructure.Repositories;
 using Crud.Persistence;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<CrudDbContext>(options => {
 
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionSQL"));
 });
+
+builder.Services.AddTransient<PersonRepository>();
 
 builder.Services.AddCors(options =>
 {

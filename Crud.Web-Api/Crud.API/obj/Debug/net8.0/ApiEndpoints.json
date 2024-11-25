@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Crud.API.Dtos.NewPersonRequest",
+        "Type": "Crud.Common.Requests.NewPersonRequest",
         "IsRequired": true
       },
       {
@@ -20,7 +20,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Crud.Domain.Entities.Person, Crud.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Crud.Common.Responses.NewPersonResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -56,7 +56,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Crud.Domain.Entities.Person, Crud.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[Crud.Common.Dtos.PersonDto, Crud.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -82,7 +82,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Crud.Domain.Entities.Person",
+        "Type": "Crud.Common.Dtos.PersonDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -107,7 +107,7 @@
       },
       {
         "Name": "request",
-        "Type": "Crud.API.Dtos.NewPersonRequest",
+        "Type": "Crud.Common.Requests.NewPersonRequest",
         "IsRequired": true
       }
     ],

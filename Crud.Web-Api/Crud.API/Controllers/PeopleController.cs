@@ -5,24 +5,30 @@ using Crud.Domain.Entities;
 using Crud.Persistence;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Crud.Infrastructure.Repositories;
+using Crud.Common.Responses;
 
 namespace Crud.API.Controllers
 {
     [ApiController]
     public class PeopleController : ControllerBase
     {
-        private readonly CrudDbContext _context;
+        private readonly PersonRepository _repo;
 
-        public PeopleController(CrudDbContext context)
+        public PeopleController(PersonRepository repo)
         {
-            _context = context;
+            _repo = repo;
         }
 
 
         [HttpGet(nameof(GetPerson))]
         public async Task<ActionResult<List<PersonDto>>> GetPeople()
         {
-            return await _context.People.ToListAsync();
+            var people = await _repo.GetPeople();
+            if (!people.Any())
+                return BadRequest("No data Found");
+
+            return people;
         }
 
         [HttpGet("GetPerson/{id}")]
@@ -31,17 +37,17 @@ namespace Crud.API.Controllers
             if (id == 0)
                 return BadRequest("You need to give me a valid Id");
 
-            var personDb = await _context.People.FindAsync(id);
-            if (personDb == null)
+            var personDto = await _repo.GetPerson(id);
+            if (personDto == null)
             {
                 return NotFound();
             }
 
-            return personDb;
+            return personDto;
         }
 
         [HttpPost("AddPerson/{id}")]
-        public async Task<ActionResult<List<PersonDto>>> AddPerson(NewPersonRequest request)
+        public async Task<ActionResult<NewPersonResponse>> AddPerson(NewPersonRequest request)
         {
             if (string.IsNullOrEmpty(request.Name))
                 return BadRequest("You need to set a name");
@@ -59,47 +65,48 @@ namespace Crud.API.Controllers
                 return BadRequest("you need to provide a valid email");
 
 
-            var personDb = new PersonDto();
+            //var personDb = new PersonDto();
 
-            personDb.Name = request.Name;
-            personDb.LastName = request.LastName;
-            personDb.Email = request.Email;
-            personDb.Phone = request.Phone;
+            //personDb.Name = request.Name;
+            //personDb.LastName = request.LastName;
+            //personDb.Email = request.Email;
+            //personDb.Phone = request.Phone;
 
-            _context.People.Add(personDb);
-            await _context.SaveChangesAsync();
-            return Ok(personDb);
+            //_repo.People.Add(personDb);
+            //await _repo.SaveChangesAsync();
+
+            return await _repo.AddPerson(request);
         }
 
         [HttpPut("UpdatePerson/{id}")]
         public async Task<IActionResult> UpdatePerson(int id, [FromBody] NewPersonRequest request)
         {
-            var personDb = await _context.People.FindAsync(id);
-            if (personDb == null)
-            {
-                return NotFound();
-            }
+            //var personDb = await _repo.People.FindAsync(id);
+            //if (personDb == null)
+            //{
+            //    return NotFound();
+            //}
 
-            personDb.Name = request.Name;
-            personDb.LastName = request.LastName;
-            personDb.Email = request.Email;
-            personDb.Phone = request.Phone;
+            //personDb.Name = request.Name;
+            //personDb.LastName = request.LastName;
+            //personDb.Email = request.Email;
+            //personDb.Phone = request.Phone;
 
-            await _context.SaveChangesAsync();
+            //await _repo.SaveChangesAsync();
             return NoContent();
         }
 
         [HttpDelete("DeletePerson/{id}")]
         public async Task<IActionResult> DeletePerson(int id)
         {
-            var person = await _context.People.FindAsync(id);
-            if (person == null)
-            {
-                return NotFound();
-            }
+            //var person = await _repo.People.FindAsync(id);
+            //if (person == null)
+            //{
+            //    return NotFound();
+            //}
 
-            _context.People.Remove(person);
-            await _context.SaveChangesAsync();
+            //_repo.People.Remove(person);
+            //await _repo.SaveChangesAsync();
             return NoContent();
         }
 

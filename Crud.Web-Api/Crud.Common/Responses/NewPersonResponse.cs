@@ -1,6 +1,6 @@
 ﻿namespace Crud.Common.Responses
 {
-    public class NewPersonRequest
+    public class NewPersonResponse
     {
         public int Id { get; set; }
     }

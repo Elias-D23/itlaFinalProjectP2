@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Crud.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+140dec2226764cf28e3bff4c536d7dc6a782fbb0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25ba7550d2f2fd580b1ec631a2af3722d04d1ce6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Crud.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Crud.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
