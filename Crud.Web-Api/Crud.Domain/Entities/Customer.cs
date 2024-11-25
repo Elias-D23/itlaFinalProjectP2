@@ -1,6 +1,6 @@
 ﻿namespace Crud.Domain.Entities
 {
-    public class Customer : Person
+    public class Customer : PersonDto
     {
         public string Job { get; set; }
 

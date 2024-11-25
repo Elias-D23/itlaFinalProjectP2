@@ -987,6 +987,16 @@
           }
         }
       },
+      "Crud.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Crud.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Crud.Common.dll": {}
+        }
+      },
       "Crud.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -2767,6 +2777,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Crud.Common/1.0.0": {
+      "type": "project",
+      "path": "../Crud.Common/Crud.Common.csproj",
+      "msbuildProject": "../Crud.Common/Crud.Common.csproj"
+    },
     "Crud.Domain/1.0.0": {
       "type": "project",
       "path": "../Crud.Domain/Crud.Domain.csproj",
@@ -2780,6 +2795,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Crud.Common >= 1.0.0",
       "Crud.Persistence >= 1.0.0"
     ]
   },
@@ -2811,6 +2827,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Common\\Crud.Common.csproj": {
+              "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Common\\Crud.Common.csproj"
+            },
             "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Persistence\\Crud.Persistence.csproj": {
               "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Persistence\\Crud.Persistence.csproj"
             }

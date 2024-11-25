@@ -49,6 +49,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Crud.Common\Crud.Common.csproj" />
     <ProjectReference Include="..\Crud.Persistence\Crud.Persistence.csproj" />
   </ItemGroup>
 

@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{02C04E9C-5AEC-4851-A7BF-D4F0AD22615F}|Crud.Infrastucture\\Crud.Infrastructure.csproj|solutionrelative:crud.infrastucture\\repositories\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02C04E9C-5AEC-4851-A7BF-D4F0AD22615F}|Crud.Infrastucture\\Crud.Infrastructure.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.infrastucture\\exceptions\\personexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02C04E9C-5AEC-4851-A7BF-D4F0AD22615F}|Crud.Infrastucture\\Crud.Infrastructure.csproj|solutionrelative:crud.infrastucture\\exceptions\\personexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7596C39E-B495-486E-AD58-E981C7189FB0}|Crud.API\\Crud.API.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.api\\controllers\\peoplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7596C39E-B495-486E-AD58-E981C7189FB0}|Crud.API\\Crud.API.csproj|solutionrelative:crud.api\\controllers\\peoplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02C04E9C-5AEC-4851-A7BF-D4F0AD22615F}|Crud.Infrastucture\\Crud.Infrastructure.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.infrastucture\\exceptions\\customerexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02C04E9C-5AEC-4851-A7BF-D4F0AD22615F}|Crud.Infrastucture\\Crud.Infrastructure.csproj|solutionrelative:crud.infrastucture\\exceptions\\customerexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE6479A7-4711-4A24-BB1E-0037813D11FB}|Crud.Common\\Crud.Common.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.common\\dtos\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE6479A7-4711-4A24-BB1E-0037813D11FB}|Crud.Common\\Crud.Common.csproj|solutionrelative:crud.common\\dtos\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,12 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,34 +32,40 @@
               "RelativeDocumentMoniker": "Crud.Infrastucture\\Repositories\\PersonRepository.cs",
               "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Repositories\\PersonRepository.cs",
               "RelativeToolTip": "Crud.Infrastucture\\Repositories\\PersonRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwAUAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABcAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T02:05:52.797Z",
+              "WhenOpened": "2024-11-25T02:14:52.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PersonDto.cs",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Common\\Dtos\\PersonDto.cs",
+              "RelativeDocumentMoniker": "Crud.Common\\Dtos\\PersonDto.cs",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Common\\Dtos\\PersonDto.cs",
+              "RelativeToolTip": "Crud.Common\\Dtos\\PersonDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T00:40:41.16Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PersonException.cs",
-              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Exceptions\\PersonException.cs",
-              "RelativeDocumentMoniker": "Crud.Infrastucture\\Exceptions\\PersonException.cs",
-              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Exceptions\\PersonException.cs",
-              "RelativeToolTip": "Crud.Infrastucture\\Exceptions\\PersonException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "PeopleController.cs",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.API\\Controllers\\PeopleController.cs",
+              "RelativeDocumentMoniker": "Crud.API\\Controllers\\PeopleController.cs",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.API\\Controllers\\PeopleController.cs",
+              "RelativeToolTip": "Crud.API\\Controllers\\PeopleController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowB4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T01:59:50.672Z"
+              "WhenOpened": "2024-11-25T00:30:37.298Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomerException.cs",
-              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Exceptions\\CustomerException.cs",
-              "RelativeDocumentMoniker": "Crud.Infrastucture\\Exceptions\\CustomerException.cs",
-              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Exceptions\\CustomerException.cs",
-              "RelativeToolTip": "Crud.Infrastucture\\Exceptions\\CustomerException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T01:57:18.98Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }

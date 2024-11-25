@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Crud.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+877e90a789f4c364419199c44639ee5adf0594b7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+140dec2226764cf28e3bff4c536d7dc6a782fbb0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Crud.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Crud.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

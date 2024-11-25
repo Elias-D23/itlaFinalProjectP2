@@ -11,7 +11,7 @@ namespace Crud.Persistence
 
         }
 
-        public DbSet<Person> People { get; set; }
+        public DbSet<PersonDto> People { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Loan> Loans { get; set; }
         public DbSet<Employee> Employees { get; set; }
@@ -21,7 +21,7 @@ namespace Crud.Persistence
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Person>().HasIndex(p => p.Id).IsUnique();
+            modelBuilder.Entity<PersonDto>().HasIndex(p => p.Id).IsUnique();
 
         }
     }

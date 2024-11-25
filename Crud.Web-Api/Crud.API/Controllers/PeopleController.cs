@@ -1,5 +1,6 @@
 ﻿using Azure.Core;
-using Crud.API.Dtos;
+using Crud.Common.Requests;
+using Crud.Common.Dtos;
 using Crud.Domain.Entities;
 using Crud.Persistence;
 using Microsoft.AspNetCore.Mvc;
@@ -19,13 +20,13 @@ namespace Crud.API.Controllers
 
 
         [HttpGet(nameof(GetPerson))]
-        public async Task<ActionResult<List<Person>>> GetPeople()
+        public async Task<ActionResult<List<PersonDto>>> GetPeople()
         {
             return await _context.People.ToListAsync();
         }
 
         [HttpGet("GetPerson/{id}")]
-        public async Task<ActionResult<Person>> GetPerson(int id)
+        public async Task<ActionResult<PersonDto>> GetPerson(int id)
         {
             if (id == 0)
                 return BadRequest("You need to give me a valid Id");
@@ -40,7 +41,7 @@ namespace Crud.API.Controllers
         }
 
         [HttpPost("AddPerson/{id}")]
-        public async Task<ActionResult<List<Person>>> AddPerson(NewPersonRequest request)
+        public async Task<ActionResult<List<PersonDto>>> AddPerson(NewPersonRequest request)
         {
             if (string.IsNullOrEmpty(request.Name))
                 return BadRequest("You need to set a name");
@@ -58,7 +59,7 @@ namespace Crud.API.Controllers
                 return BadRequest("you need to provide a valid email");
 
 
-            var personDb = new Person();
+            var personDb = new PersonDto();
 
             personDb.Name = request.Name;
             personDb.LastName = request.LastName;
