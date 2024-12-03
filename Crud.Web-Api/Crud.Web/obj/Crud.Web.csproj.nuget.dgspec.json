@@ -4,6 +4,98 @@
     "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Crud.Web.csproj": {}
   },
   "projects": {
+    "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.API\\Crud.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.API\\Crud.API.csproj",
+        "projectName": "Crud.API",
+        "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.API\\Crud.API.csproj",
+        "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\elias\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Common\\Crud.Common.csproj": {
+                "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Common\\Crud.Common.csproj"
+              },
+              "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Domain\\Crud.Domain.csproj": {
+                "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Domain\\Crud.Domain.csproj"
+              },
+              "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Crud.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Crud.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Common\\Crud.Common.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -126,6 +218,153 @@
         }
       }
     },
+    "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Crud.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Crud.Infrastructure.csproj",
+        "projectName": "Crud.Infrastructure",
+        "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Crud.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\elias\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Common\\Crud.Common.csproj": {
+                "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Common\\Crud.Common.csproj"
+              },
+              "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Persistence\\Crud.Persistence.csproj": {
+                "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Persistence\\Crud.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Persistence\\Crud.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Persistence\\Crud.Persistence.csproj",
+        "projectName": "Crud.Persistence",
+        "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Persistence\\Crud.Persistence.csproj",
+        "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\elias\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Domain\\Crud.Domain.csproj": {
+                "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Domain\\Crud.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Crud.Web.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -151,11 +390,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.API\\Crud.API.csproj": {
+                "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.API\\Crud.API.csproj"
+              },
               "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Common\\Crud.Common.csproj": {
                 "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Common\\Crud.Common.csproj"
               },
               "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Domain\\Crud.Domain.csproj": {
                 "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Domain\\Crud.Domain.csproj"
+              },
+              "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Persistence\\Crud.Persistence.csproj": {
+                "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Persistence\\Crud.Persistence.csproj"
               }
             }
           }

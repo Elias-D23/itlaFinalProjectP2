@@ -1,0 +1,41 @@
+﻿@model List<User>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>Personas</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Nombre Completo</th>
+        <th>DNI</th>
+        <th>Gmail</th>
+    </tr>
+    @if (!Model.Any())
+    {
+        <tr>
+            <td colspan="4">No se encontraron registros</td>
+        </tr>
+    }
+    else
+    {
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserId</td>
+                <td>@user.FullName</td>
+                <td>@user.DNI</td>
+                <td>@user.Email</td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@user.UserId" class="btn btn-primary">Edit</a>
+                    |
+                    <a asp-action="Delete" asp-route-id="@user.UserId" onclick="return confirm('Are you sure you want to remove it?')" type="button" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    }
+</table>
+

@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "m99MhcQDBsEdn4rmimQrfN0Hh6I3ySH327cjQgcrSCI=",
+  "Hash": "MvurRbBItGLNZKR4CzyNgoQ2a8XsJogwGhWO8KPUxRo=",
   "Source": "Crud.Web",
   "BasePath": "_content/Crud.Web",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.API\\Crud.API.csproj",
+      "Version": 2,
+      "Source": "Crud.API",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "Crud.Web\\wwwroot",

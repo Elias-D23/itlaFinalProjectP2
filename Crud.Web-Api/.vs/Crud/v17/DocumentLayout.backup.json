@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE197063-7B01-4F07-9C33-7A863A6A18E5}|Crud.Web\\Crud.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.web\\views\\people\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE197063-7B01-4F07-9C33-7A863A6A18E5}|Crud.Web\\Crud.Web.csproj|solutionrelative:crud.web\\views\\people\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7596C39E-B495-486E-AD58-E981C7189FB0}|Crud.API\\Crud.API.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.api\\controllers\\peoplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7596C39E-B495-486E-AD58-E981C7189FB0}|Crud.API\\Crud.API.csproj|solutionrelative:crud.api\\controllers\\peoplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE197063-7B01-4F07-9C33-7A863A6A18E5}|Crud.Web\\Crud.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.web\\views\\people\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE197063-7B01-4F07-9C33-7A863A6A18E5}|Crud.Web\\Crud.Web.csproj|solutionrelative:crud.web\\views\\people\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE197063-7B01-4F07-9C33-7A863A6A18E5}|Crud.Web\\Crud.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.web\\views\\people\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE197063-7B01-4F07-9C33-7A863A6A18E5}|Crud.Web\\Crud.Web.csproj|solutionrelative:crud.web\\views\\people\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{02C04E9C-5AEC-4851-A7BF-D4F0AD22615F}|Crud.Infrastucture\\Crud.Infrastructure.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\crud.web-api\\crud.infrastucture\\repositories\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02C04E9C-5AEC-4851-A7BF-D4F0AD22615F}|Crud.Infrastucture\\Crud.Infrastructure.csproj|solutionrelative:crud.infrastucture\\repositories\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,47 +21,34 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "List.cshtml",
-              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Views\\People\\List.cshtml",
-              "RelativeDocumentMoniker": "Crud.Web\\Views\\People\\List.cshtml",
-              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Views\\People\\List.cshtml",
-              "RelativeToolTip": "Crud.Web\\Views\\People\\List.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T17:17:05.057Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Views\\People\\Create.cshtml",
-              "RelativeDocumentMoniker": "Crud.Web\\Views\\People\\Create.cshtml",
-              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Views\\People\\Create.cshtml",
-              "RelativeToolTip": "Crud.Web\\Views\\People\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T17:17:04.098Z",
+              "Title": "PersonRepository.cs",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Repositories\\PersonRepository.cs",
+              "RelativeDocumentMoniker": "Crud.Infrastucture\\Repositories\\PersonRepository.cs",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Infrastucture\\Repositories\\PersonRepository.cs",
+              "RelativeToolTip": "Crud.Infrastucture\\Repositories\\PersonRepository.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwDIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T21:39:18.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Views\\People\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Crud.Web\\Views\\People\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.Web\\Views\\People\\Edit.cshtml",
-              "RelativeToolTip": "Crud.Web\\Views\\People\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T17:16:22.449Z",
+              "Title": "PeopleController.cs",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.API\\Controllers\\PeopleController.cs",
+              "RelativeDocumentMoniker": "Crud.API\\Controllers\\PeopleController.cs",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\Crud.Web-Api\\Crud.API\\Controllers\\PeopleController.cs",
+              "RelativeToolTip": "Crud.API\\Controllers\\PeopleController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAQwDcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T21:57:35.3Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }

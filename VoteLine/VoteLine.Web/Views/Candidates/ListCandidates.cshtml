@@ -1,0 +1,124 @@
+﻿@model List<Candidate>
+
+
+@{
+    Layout= "_Layout2";
+}
+@{
+    ViewData["Title"] = "List Candidates";
+}
+
+<style>
+    * {
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+    }
+
+    h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        position: relative;
+        width: 80%;
+        margin: 40px auto;
+    }
+
+    h1::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: rgb(112, 97, 78);
+        top: 100%;
+    }
+
+    .container1 {
+        width: 90%;
+        margin: 40px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+        column-gap: 30px;
+        row-gap: 20px;
+    }
+
+    .box {
+        width: 300px;
+        height: 350px;
+        box-sizing: border-box;
+        border: solid 2px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        position:relative;
+    }
+
+    .btn-vote{
+        display: flex;
+        width: 290px;
+        position: absolute;
+        top: 85%;
+    }
+
+   
+    button {
+        width: 150px;
+        margin: 2px;
+    }
+    .img{
+        margin:2px;
+        position: absolute;
+    }
+
+    img{
+        width:180px;
+        height: 155px;
+    }
+
+    .info{
+        top:80%;
+        position:absolute;
+    }
+</style>
+
+
+
+<h1>Candidates</h1>
+
+@if (!Model.Any())
+{
+    <tr>
+        <td colspan="4">No se encontraron registros</td>
+    </tr>
+}
+else
+{
+    <div class="container1">
+    @foreach (var candidate in Model)
+    {
+
+        <div class="box">
+
+            <div class="img">
+                <img src="~/img/img1.png" alt="Alternate Text" />
+                <hr/>
+                    <p>@candidate.FullName</p>
+                    <p>@candidate.Party</p>
+                    <p>@candidate.Position</p>
+            </div>
+            <div class="btn-vote">
+                <form asp-controller="Votes" asp-action="Vote" method="post">
+                    <input type="hidden" name="candidateId" value="@candidate.CandidateId" />
+                    <button class="btn btn-success" type="submit">Vote</button>
+                </form>
+            </div>
+        </div>
+
+    }
+    </div>
+}
+
+
+ 

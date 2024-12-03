@@ -21,7 +21,7 @@ namespace Crud.API.Controllers
         }
 
 
-        [HttpGet(nameof(GetPerson))]
+        [HttpGet(nameof(GetPeople))]
         public async Task<ActionResult<List<PersonDto>>> GetPeople()
         {
             var people = await _repo.GetPeople();

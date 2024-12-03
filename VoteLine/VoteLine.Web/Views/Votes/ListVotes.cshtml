@@ -1,0 +1,45 @@
+﻿@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+@if (TempData["InfoMessage"] != null)
+{
+    <div class="alert alert-info">@TempData["InfoMessage"]</div>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Usuario</th>
+            <th>Email</th>
+            <th>Candidato</th>
+            <th>Partido</th>
+            <th>Posición</th>
+            <th>Fecha de Voto</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var vote in Model)
+        {
+            <tr>
+                <td>@vote.VoteId</td>
+                <td>@vote.UserName</td>
+                <td>@vote.UserEmail</td>
+                <td>@vote.CandidateName</td>
+                <td>@vote.CandidateParty</td>
+                <td>@vote.CandidatePosition</td>
+                <td>@vote.VoteDate</td>
+                <td>
+                    @*  <a href="@Url.Action("EditVote", new { voteId = vote.VoteId })" class="btn btn-warning">Editar</a> *@
+                    <a href="@Url.Action("DeleteVote", new { voteId = vote.VoteId })" onclick="return confirm('Are you sure you want to remove it?')" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

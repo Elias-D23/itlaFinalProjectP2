@@ -49,7 +49,7 @@
   {
     "ContainingType": "Crud.API.Controllers.PeopleController",
     "Method": "GetPeople",
-    "RelativePath": "GetPerson",
+    "RelativePath": "GetPeople",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
