@@ -43,3 +43,55 @@
     </tbody>
 </table>
 
+
+@section Scripts{
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+  <script>
+        // Obtener los datos desde ViewBag
+        const voteData = @Html.Raw(ViewBag.VoteData);
+
+        // Transformar datos en formato adecuado para Highcharts
+        const chartData = voteData.map(vote => ({
+            name: vote.CandidateName,
+            y: vote.TotalVotes
+        }));
+
+        // Crear la gráfica con los datos de votaciones
+        Highcharts.chart('container', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Votos por Candidato'
+            },
+            xAxis: {
+                type: 'category',
+                title: {
+                    text: 'Candidatos'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'Número de Votos'
+                }
+            },
+            series: [
+                {
+                    name: 'Votos',
+                    colorByPoint: true,
+                    data: chartData
+                }
+            ]
+        });
+   </script>
+}
+
+<div id="container"></div>
+
+

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\voteline.web\\views\\votes\\listvotes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|solutionrelative:voteline.web\\views\\votes\\listvotes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\voteline.web\\views\\shared\\_layout2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|solutionrelative:voteline.web\\views\\shared\\_layout2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\voteline.web\\controllers\\votescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|solutionrelative:voteline.web\\controllers\\votescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,13 +30,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout2.cshtml",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Shared\\_Layout2.cshtml",
+              "RelativeDocumentMoniker": "VoteLine.Web\\Views\\Shared\\_Layout2.cshtml",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Shared\\_Layout2.cshtml",
+              "RelativeToolTip": "VoteLine.Web\\Views\\Shared\\_Layout2.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-03T13:41:16.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ListVotes.cshtml",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Votes\\ListVotes.cshtml",
+              "RelativeDocumentMoniker": "VoteLine.Web\\Views\\Votes\\ListVotes.cshtml",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Votes\\ListVotes.cshtml",
+              "RelativeToolTip": "VoteLine.Web\\Views\\Votes\\ListVotes.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAADQAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-03T13:29:40.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "VotesController.cs",
               "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Controllers\\VotesController.cs",
               "RelativeDocumentMoniker": "VoteLine.Web\\Controllers\\VotesController.cs",
               "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Controllers\\VotesController.cs",
               "RelativeToolTip": "VoteLine.Web\\Controllers\\VotesController.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAwwGQAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAqwHMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T12:38:42.15Z",
               "EditorCaption": ""

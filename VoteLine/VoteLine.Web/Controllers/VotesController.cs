@@ -65,6 +65,20 @@ namespace VoteLine.Web.Controllers
                 })
                 .ToListAsync();
 
+            // Preparar los datos para la gráfica
+            var votesByCandidate = _Dbcontext.Votes
+                .Include(v => v.Candidate)
+                .GroupBy(v => v.Candidate.FullName)
+                .Select(g => new
+                {
+                    CandidateName = g.Key,
+                    TotalVotes = g.Count()
+                })
+                .ToList();
+
+            ViewBag.VoteData = Newtonsoft.Json.JsonConvert.SerializeObject(votesByCandidate);
+
+
             return View(votes);
         }
 
@@ -99,6 +113,7 @@ namespace VoteLine.Web.Controllers
 
         //    return RedirectToAction("ListVotes");
         //}
+
     }
 }
 
