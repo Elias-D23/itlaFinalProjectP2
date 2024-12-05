@@ -1,0 +1,14 @@
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\bin\Debug\net8.0\VotLine.Domain.deps.json
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\bin\Debug\net8.0\VotLine.Domain.dll
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\bin\Debug\net8.0\VotLine.Domain.pdb
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\VotLine.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\VotLine.Domain.AssemblyInfoInputs.cache
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\VotLine.Domain.AssemblyInfo.cs
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\VotLine.Domain.csproj.CoreCompileInputs.cache
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\VotLine.Domain.sourcelink.json
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\VotLine.Domain.dll
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\refint\VotLine.Domain.dll
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\VotLine.Domain.pdb
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\ref\VotLine.Domain.dll
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\bin\Debug\net8.0\VotLine.Domain.runtimeconfig.json
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\VotLine.Domain.genruntimeconfig.cache

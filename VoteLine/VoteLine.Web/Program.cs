@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using VoteLine.Web.Data;
+using VoteLine.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,13 +13,6 @@ builder.Services.AddDbContext<VoteLineDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionSQL"));
 });
 
-// Authentication -->
-//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-//    .AddCookie(options =>
-//    {
-//        options.LoginPath = "/Access/Login";
-//        options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
-//    });
 
 // Authentication -->
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

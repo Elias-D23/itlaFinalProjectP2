@@ -1,0 +1,6 @@
+@VotLine.API_HostAddress = http://localhost:5179
+
+GET {{VotLine.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

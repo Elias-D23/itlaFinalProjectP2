@@ -2,8 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System;
-using VoteLine.Web.Data;
-using VoteLine.Web.Models.Entities;
+using VoteLine.Domain.Entities;
+using VoteLine.Domain;
 
 namespace VoteLine.Web.Controllers
 {

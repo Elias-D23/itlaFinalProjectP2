@@ -2741,6 +2741,20 @@
             "rid": "win"
           }
         }
+      },
+      "VoteLine.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10"
+        },
+        "compile": {
+          "bin/placeholder/VoteLine.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VoteLine.Domain.dll": {}
+        }
       }
     }
   },
@@ -7704,6 +7718,11 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "VoteLine.Domain/1.0.0": {
+      "type": "project",
+      "path": "../VotLine.Domain/VoteLine.Domain.csproj",
+      "msbuildProject": "../VotLine.Domain/VoteLine.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7711,7 +7730,8 @@
       "Microsoft.EntityFrameworkCore >= 8.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7",
+      "VoteLine.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7741,7 +7761,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VotLine.Domain\\VoteLine.Domain.csproj": {
+              "projectPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VotLine.Domain\\VoteLine.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

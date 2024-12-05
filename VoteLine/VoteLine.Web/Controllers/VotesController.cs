@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using VoteLine.Web.Data;
-using VoteLine.Web.Models.Entities;
+using VoteLine.Web;
 using System.Linq;
+using VoteLine.Domain.Entities;
+using VoteLine.Domain;
 
 
 namespace VoteLine.Web.Controllers

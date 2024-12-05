@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using VoteLine.Web.Models.Entities;
+using VoteLine.Domain.Entities;
 
 namespace VoteLine.Web.Controllers
 {

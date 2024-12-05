@@ -2,8 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System;
-using VoteLine.Web.Data;
-using VoteLine.Web.Models.Entities;
 using VoteLine.Web.Models.ViewModels;
 using System.Formats.Asn1;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
@@ -11,6 +9,8 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using VoteLine.Domain.Entities;
+using VoteLine.Domain;
 
 namespace VoteLine.Web.Controllers
 {
@@ -85,10 +85,8 @@ namespace VoteLine.Web.Controllers
             await _Dbcontext.Users.AddAsync(user);
             await _Dbcontext.SaveChangesAsync();
 
-            
-            return RedirectToAction("Index", "Home");
-            //return RedirectToAction(nameof(List));
 
+            return RedirectToAction("Index", "Home");
         }
 
         //Login . . .
