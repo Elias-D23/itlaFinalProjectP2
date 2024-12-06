@@ -1,13 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
-using VoteLine.API.Requets;
+using VoteLine.API.Dtos;
 using VoteLine.Domain;
 using VoteLine.Domain.Entities;
+using VoteLine.Persistence;
 
 namespace VoteLine.API.Controllers
 {
-
+    [ApiController]
+    [Route("[Controller]")]
     public class UsersController : ControllerBase
     {
         private readonly VoteLineDbContext _context;
@@ -23,23 +25,45 @@ namespace VoteLine.API.Controllers
             return await _context.Users.ToListAsync();
         }
 
-        [HttpPost("AddUsers")]
-        public async Task<ActionResult<List<User>>> AddUsers(NewUserRequest request)
+        [HttpGet("GetUser/{id}")]
+        public async Task<ActionResult<User>> GetUser(int id)
         {
+            if (id == 0)
+                return BadRequest("You need to give me a valid Id");
 
+            var userDb = await _context.Users.FindAsync(id);
+            if (userDb == null)
+            {
+                return NotFound();
+            }
+
+            return userDb;
+        }
+
+        [HttpPost("AddUser")]
+        public async Task<ActionResult<User>> AddUser(NewUserRequest request)
+        {
+            //if (string.IsNullOrEmpty(request.FullName) ||
+            //    string.IsNullOrEmpty(request.Email) ||
+            //    string.IsNullOrEmpty(request.Password) ||
+            //    string.IsNullOrEmpty(request.DNI))
+            //{
+            //    return BadRequest("All fields are required.");
+            //}
             var userDb = new User();
 
             userDb.FullName = request.FullName;
-            userDb.Email = request.Email;
             userDb.Password = request.Password;
             userDb.DNI = request.DNI;
+            userDb.Email = request.Email;
 
             _context.Users.Add(userDb);
             await _context.SaveChangesAsync();
-            return Ok(userDb);
+            return userDb;
+            //return Ok(userDb);
         }
 
-        [HttpPut("UpdateUsers")]
+        [HttpPut("UpdateUser")]
         public async Task<IActionResult> UpdateUsers(int id, [FromBody] NewUserRequest request)
         {
             var userDb = await _context.Users.FindAsync(id);

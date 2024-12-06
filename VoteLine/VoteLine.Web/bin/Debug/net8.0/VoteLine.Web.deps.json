@@ -9,9 +9,9 @@
       "VoteLine.Web/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.10",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.10",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.7",
+          "VotLine.Persistence": "1.0.0",
           "VoteLine.Domain": "1.0.0"
         },
         "runtime": {
@@ -1903,12 +1903,21 @@
         }
       },
       "VoteLine.Domain/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.10",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10"
-        },
         "runtime": {
           "VoteLine.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "VotLine.Persistence/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10",
+          "VoteLine.Domain": "1.0.0"
+        },
+        "runtime": {
+          "VotLine.Persistence.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -3036,6 +3045,11 @@
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
     },
     "VoteLine.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VotLine.Persistence/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

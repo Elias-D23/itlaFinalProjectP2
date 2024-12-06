@@ -11,6 +11,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using VoteLine.Domain.Entities;
 using VoteLine.Domain;
+using VoteLine.Persistence;
 
 namespace VoteLine.Web.Controllers
 {

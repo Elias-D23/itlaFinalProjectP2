@@ -4,6 +4,7 @@ using VoteLine.Web;
 using System.Linq;
 using VoteLine.Domain.Entities;
 using VoteLine.Domain;
+using VoteLine.Persistence;
 
 
 namespace VoteLine.Web.Controllers

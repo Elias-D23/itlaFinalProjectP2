@@ -1,29 +1,35 @@
-﻿@using VoteLine.Domain.Entities
+﻿@*
+ @using VoteLine.Domain.Entities
 @model List<User>
+*@
+@*<a class="btn btn-primary" id="addUserButton"> Add </a> *@
 
 @{
     ViewData["Title"] = "List";
 }
 
-<h1>Personas</h1>
-@*<a class="btn btn-primary" id="addUserButton"> Add </a> *@
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Nombre Completo</th>
-            <th>DNI</th>
-            <th>Gmail</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody id="usersTableBody" >
-        <tr>
-            <td colspan="5">No Records found</td>
-        </tr>
-    </tbody>
-</table>
+<html>
 
+    <h1>Personas</h1>
+    <body>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre Completo</th>
+                    <th>DNI</th>
+                    <th>Gmail</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="usersTableBody" >
+                <tr>
+                    <td colspan="5">No Records found</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
 
   @*
     @if (!Model.Any())
@@ -70,7 +76,7 @@
 
                 if (confirm('Are you sure you want to delete this person?')) {
                     $.ajax({
-                        url: 'https://localhost:7065/DeleteUsers/' + userId,
+                        url: 'https://localhost:7065/Users/DeleteUsers/' + userId,
                         type: 'DELETE',
                         success: function () {
                             alert('User deleted successfully');
@@ -89,10 +95,10 @@
             });
         });
        
-        $('#usersTableBody').html(tableBody);
+        // $('#usersTableBody').html(tableBody);
         function loadUsers() {
             $.ajax({
-                url: 'https://localhost:7065/GetUsers',
+                url: 'https://localhost:7065/Users/GetUsers',
                 type: 'GET',
                 success: function (data) {
                     var tableBody = '';

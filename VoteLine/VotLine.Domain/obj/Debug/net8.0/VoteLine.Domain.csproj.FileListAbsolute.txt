@@ -12,4 +12,3 @@ C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\
 C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\VoteLine.Domain.pdb
 C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\VoteLine.Domain.genruntimeconfig.cache
 C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\ref\VoteLine.Domain.dll
-C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Domain\obj\Debug\net8.0\VoteLine.Domain.csproj.AssemblyReference.cache

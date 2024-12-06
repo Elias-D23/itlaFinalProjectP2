@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using VoteLine.Domain;
+using VoteLine.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,16 +17,27 @@ builder.Services.AddDbContext<VoteLineDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionSQL"));
 });
 
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy(name: "MyAllowSpecificOrigins",
+//        builder =>
+//        {
+//            builder.WithOrigins("https://localhost",
+//                                "https://localhost:7065")
+//                   .AllowAnyMethod()
+//                   .AllowAnyHeader()
+//                   .SetIsOriginAllowedToAllowWildcardSubdomains();
+//        });
+//});
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: "MyAllowSpecificOrigins",
         builder =>
         {
-            builder.WithOrigins("https://localhost",
-                                "https://localhost:7057")
+            builder.WithOrigins("https://localhost:7057")
                    .AllowAnyMethod()
                    .AllowAnyHeader();
-                   //.SetIsOriginAllowedToAllowWildcardSubdomains();
         });
 });
 

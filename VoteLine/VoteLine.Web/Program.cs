@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using VoteLine.Domain;
+using VoteLine.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 

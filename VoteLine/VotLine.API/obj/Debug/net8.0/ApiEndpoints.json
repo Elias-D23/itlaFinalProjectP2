@@ -1,36 +1,21 @@
 [
   {
     "ContainingType": "VoteLine.API.Controllers.UsersController",
-    "Method": "AddUsers",
-    "RelativePath": "AddUsers",
+    "Method": "AddUser",
+    "RelativePath": "Users/AddUser",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "FullName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Email",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Password",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "DNI",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "VoteLine.API.Dtos.NewUserRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[VoteLine.Domain.Entities.User, VoteLine.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "VoteLine.Domain.Entities.User",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -43,7 +28,7 @@
   {
     "ContainingType": "VoteLine.API.Controllers.UsersController",
     "Method": "DeleteUsers",
-    "RelativePath": "DeleteUsers/{id}",
+    "RelativePath": "Users/DeleteUsers/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -58,8 +43,34 @@
   },
   {
     "ContainingType": "VoteLine.API.Controllers.UsersController",
+    "Method": "GetUser",
+    "RelativePath": "Users/GetUser/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VoteLine.Domain.Entities.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VoteLine.API.Controllers.UsersController",
     "Method": "GetUsers",
-    "RelativePath": "GetUsers",
+    "RelativePath": "Users/GetUsers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -79,7 +90,7 @@
   {
     "ContainingType": "VoteLine.API.Controllers.UsersController",
     "Method": "UpdateUsers",
-    "RelativePath": "UpdateUsers",
+    "RelativePath": "Users/UpdateUser",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -91,7 +102,7 @@
       },
       {
         "Name": "request",
-        "Type": "VoteLine.API.Requets.NewUserRequest",
+        "Type": "VoteLine.API.Dtos.NewUserRequest",
         "IsRequired": true
       }
     ],

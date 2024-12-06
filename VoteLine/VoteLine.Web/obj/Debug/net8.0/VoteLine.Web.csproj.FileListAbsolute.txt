@@ -517,3 +517,5 @@ C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VoteLine.Web\obj\Debug\ne
 C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VoteLine.Web\obj\Debug\net8.0\ref\VoteLine.Web.dll
 C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VoteLine.Web\bin\Debug\net8.0\VoteLine.Domain.dll
 C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VoteLine.Web\bin\Debug\net8.0\VoteLine.Domain.pdb
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VoteLine.Web\bin\Debug\net8.0\VotLine.Persistence.dll
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VoteLine.Web\bin\Debug\net8.0\VotLine.Persistence.pdb

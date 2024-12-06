@@ -5,9 +5,15 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoteLine.Web", "VoteLine.Web\VoteLine.Web.csproj", "{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoteLine.API", "VotLine.API\VoteLine.API.csproj", "{F4E5A627-F3F1-402A-AFE7-9B8EF15D2DF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoteLine.API", "VotLine.API\VoteLine.API.csproj", "{F4E5A627-F3F1-402A-AFE7-9B8EF15D2DF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoteLine.Domain", "VotLine.Domain\VoteLine.Domain.csproj", "{18EB943F-130B-44BA-94D9-8204FB2A5FDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoteLine.Domain", "VotLine.Domain\VoteLine.Domain.csproj", "{18EB943F-130B-44BA-94D9-8204FB2A5FDB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VotLine.Application", "VotLine.Application\VotLine.Application.csproj", "{92526CCA-DFAC-452F-80C9-3463A935E94F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VotLine.Infrastructure", "VotLine.Infrastructure\VotLine.Infrastructure.csproj", "{4A39639A-1E8C-4D0F-AD62-77AFAB6CDBE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VotLine.Persistence", "VotLine.Persistence\VotLine.Persistence.csproj", "{3EC1101A-DEC3-4965-9F30-D1CF41D64451}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,18 @@ Global
 		{18EB943F-130B-44BA-94D9-8204FB2A5FDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18EB943F-130B-44BA-94D9-8204FB2A5FDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18EB943F-130B-44BA-94D9-8204FB2A5FDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92526CCA-DFAC-452F-80C9-3463A935E94F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92526CCA-DFAC-452F-80C9-3463A935E94F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92526CCA-DFAC-452F-80C9-3463A935E94F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92526CCA-DFAC-452F-80C9-3463A935E94F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A39639A-1E8C-4D0F-AD62-77AFAB6CDBE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A39639A-1E8C-4D0F-AD62-77AFAB6CDBE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A39639A-1E8C-4D0F-AD62-77AFAB6CDBE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A39639A-1E8C-4D0F-AD62-77AFAB6CDBE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EC1101A-DEC3-4965-9F30-D1CF41D64451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EC1101A-DEC3-4965-9F30-D1CF41D64451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EC1101A-DEC3-4965-9F30-D1CF41D64451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EC1101A-DEC3-4965-9F30-D1CF41D64451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
