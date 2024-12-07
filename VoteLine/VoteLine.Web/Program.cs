@@ -9,20 +9,23 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 //My Connection DB. -->
-builder.Services.AddDbContext<VoteLineDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionSQL"));
-});
+//builder.Services.AddDbContext<VoteLineDbContext>(options =>
+//{
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionSQL"));
+//});
 
+// Configurar HttpClient para consumir la API
+builder.Services.AddHttpClient();
 
-// Authentication -->
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.LoginPath = "/Access/Login";
-        options.LogoutPath = "/Access/Logout";
-        options.ExpireTimeSpan = TimeSpan.FromHours(1);
-    });
+// Authentication --> // Configuración de autenticación con cookies
+//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+//    .AddCookie(options =>
+//    {
+//        options.LoginPath = "/Access/Login";
+//        options.LogoutPath = "/Access/Logout";
+//        options.ExpireTimeSpan = TimeSpan.FromHours(1);
+//    });
+
 
 var app = builder.Build();
 
@@ -38,9 +41,6 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthentication();
-
-app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",

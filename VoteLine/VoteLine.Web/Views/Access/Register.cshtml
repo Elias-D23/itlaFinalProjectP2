@@ -30,8 +30,7 @@
                             </div>
                         </form>
 
-
-                    <h6> Do you already have an account?<a asp-controller="Access" asp-action="Login"> Login </a> </h6>
+                    @* <h6> Do you already have an account?<a asp-controller="Access" asp-action="Login"> Login </a> </h6> *@
                     </div>
 
                 </div>
@@ -42,7 +41,6 @@
 </html>
 
 @section Scripts{
-
     <script> 
              $(document).ready(function() {
                 $('#registerForm').submit(function (e) {
@@ -61,7 +59,11 @@
                          data: JSON.stringify(newUser),
                          success: function(data) {
                          alert('Person added successfully with ID: ' + data.userId);
-                        window.location.href = '/Access/Login';
+
+                            // Almacenar el userId en localStorage
+                            localStorage.setItem('userId', data.userId);
+
+                        window.location.href = '/Home/Index';
                          },
                         error: function (xhr, status, error) {
                             console.error('Error:', xhr.responseText || error);
@@ -73,5 +75,4 @@
                  });
              });
     </script>
-
 }

@@ -10,12 +10,12 @@ namespace VoteLine.Web.Controllers
 {
     public class CandidatesController : Controller
     {
-        private readonly VoteLineDbContext _Dbcontext;
+        //private readonly VoteLineDbContext _Dbcontext;
 
-        public CandidatesController(VoteLineDbContext context)
-        {
-            _Dbcontext = context;
-        }
+        //public CandidatesController(VoteLineDbContext context)
+        //{
+        //    _Dbcontext = context;
+        //}
 
 
         [HttpGet]
@@ -24,28 +24,24 @@ namespace VoteLine.Web.Controllers
             return View();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create(Candidate candidate)
-        {
-            await _Dbcontext.Candidates.AddAsync(candidate);
-            await _Dbcontext.SaveChangesAsync();
-            return RedirectToAction(nameof(ListCandidates));
-        }
-
 
         [HttpGet]
         public async Task<IActionResult> ListCandidates()
         {
-            List<Candidate> listCandidates = await _Dbcontext.Candidates.ToListAsync();
-            return View(listCandidates);
+            //List<Candidate> listCandidates = await _Dbcontext.Candidates.ToListAsync();
+            //return View(listCandidates);
+            return View();
         }
 
-        //[HttpGet]
-        //public async Task<IActionResult> Edit(int id)
-        //{
-        //    Person person = await _Dbcontext.People.FirstAsync(e => e.Id == id);
-        //    return View(person);
-        //}
+        [HttpGet]
+        public async Task<IActionResult> Edit()
+        {
+            //Candidate candidate = await _Dbcontext.Candidates.FirstAsync(e => e.CandidateId == id);
+            //return View(candidate);
+            return View();
+
+        }
+
 
         //[HttpPost]
         //public async Task<IActionResult> Edit(Person person)

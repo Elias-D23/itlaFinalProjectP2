@@ -1,6 +1,4 @@
-﻿@using System.Security.Claims
-
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 @{
@@ -8,16 +6,36 @@
 }
 
 <div class="text-center">
-    @if (User.Identity.IsAuthenticated)
-    {
-
-      <h1 class="display-4">Welcom @User.Claims.Where(c => c.Type == ClaimTypes.Name).Select(c => c.Value).SingleOrDefault()</h1>
-    }
-    else
-    {
-        <h1 class="display-4">Welcome User</h1>
-    }
+    <h1 class="display-4">Welcome, <span id="userName">User</span>!</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            const userId = localStorage.getItem('userId'); // Obtener el ID del usuario desde el almacenamiento local
 
+            if (!userId) {
+                $('#userName').text('Guest'); // Si no hay usuario registrado, muestra "Guest"
+                return;
+            }
+
+            // Llamada a la API para obtener los datos del usuario
+            $.ajax({
+                url: `https://localhost:7065/Users/GetUser/${userId}`,
+                type: 'GET',
+                success: function (data) {
+                    if (data && data.fullName) {
+                        $('#userName').text(data.fullName);
+                    } else {
+                        $('#userName').text('Guest');
+                    }
+                },
+                error: function (error) {
+                    console.error('Error fetching user data:', error);
+                    $('#userName').text('Guest'); 
+                }
+            });
+        });
+    </script>
+}

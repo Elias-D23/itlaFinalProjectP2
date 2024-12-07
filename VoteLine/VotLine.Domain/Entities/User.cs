@@ -11,7 +11,7 @@ namespace VoteLine.Domain.Entities
         public string Password { get; set; } = string.Empty;
         public string FullName { get; set; } = string.Empty;
         public string DNI { get; set; }
-        public bool IsAdmin { get; set; }
+        public bool HasVoted { get; set; }
 
         //public ICollection<Vote>? Votes { get; set; }
     }

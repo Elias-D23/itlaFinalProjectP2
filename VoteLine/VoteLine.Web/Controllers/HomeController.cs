@@ -7,7 +7,6 @@ using VoteLine.Domain.Entities;
 
 namespace VoteLine.Web.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -22,16 +21,16 @@ namespace VoteLine.Web.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Close()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-        public async Task<IActionResult> Close()
-        {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            //await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index", "Access");
         }
+
+        //public async Task<IActionResult> Close()
+        //{
+        //    await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        //    return RedirectToAction("Index", "Access");
+        //}
     }
 }

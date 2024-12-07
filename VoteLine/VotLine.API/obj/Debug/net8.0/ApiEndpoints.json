@@ -1,5 +1,114 @@
 [
   {
+    "ContainingType": "VoteLine.API.Controllers.CandidatesController",
+    "Method": "AddCandidate",
+    "RelativePath": "Candidates/AddCandidate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "VoteLine.API.Dtos.NewCandidateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VoteLine.Domain.Entities.Candidate",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VoteLine.API.Controllers.CandidatesController",
+    "Method": "DeleteCandidate",
+    "RelativePath": "Candidates/DeleteCandidate/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VoteLine.API.Controllers.CandidatesController",
+    "Method": "GetCandidate",
+    "RelativePath": "Candidates/GetCandidate/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VoteLine.Domain.Entities.Candidate",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VoteLine.API.Controllers.CandidatesController",
+    "Method": "GetCandidates",
+    "RelativePath": "Candidates/GetCandidates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[VoteLine.Domain.Entities.Candidate, VoteLine.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VoteLine.API.Controllers.CandidatesController",
+    "Method": "UpdateCandidate",
+    "RelativePath": "Candidates/UpdateCandidate/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "VoteLine.API.Dtos.NewCandidateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "VoteLine.API.Controllers.UsersController",
     "Method": "AddUser",
     "RelativePath": "Users/AddUser",
@@ -89,8 +198,8 @@
   },
   {
     "ContainingType": "VoteLine.API.Controllers.UsersController",
-    "Method": "UpdateUsers",
-    "RelativePath": "Users/UpdateUser",
+    "Method": "UpdateUser",
+    "RelativePath": "Users/UpdateUser/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -98,11 +207,37 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "request",
         "Type": "VoteLine.API.Dtos.NewUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VoteLine.API.Controllers.VotesController",
+    "Method": "GetResults",
+    "RelativePath": "Votes/GetResults",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VoteLine.API.Controllers.VotesController",
+    "Method": "SubmitVote",
+    "RelativePath": "Votes/SubmitVote",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "VoteLine.Domain.Entities.Vote",
         "IsRequired": true
       }
     ],

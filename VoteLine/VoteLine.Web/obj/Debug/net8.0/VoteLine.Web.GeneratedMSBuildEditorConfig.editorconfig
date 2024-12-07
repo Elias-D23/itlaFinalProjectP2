@@ -38,16 +38,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elias/C\#Practices/itlaFinalProjectP2/VoteLine/VoteLine.Web/Views/Access/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXExvZ2luLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/elias/C\#Practices/itlaFinalProjectP2/VoteLine/VoteLine.Web/Views/Access/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXFJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/elias/C\#Practices/itlaFinalProjectP2/VoteLine/VoteLine.Web/Views/Candidates/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elias/C\#Practices/itlaFinalProjectP2/VoteLine/VoteLine.Web/Views/Candidates/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/elias/C\#Practices/itlaFinalProjectP2/VoteLine/VoteLine.Web/Views/Candidates/ListCandidates.cshtml]
@@ -68,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/elias/C\#Practices/itlaFinalProjectP2/VoteLine/VoteLine.Web/Views/Votes/ListVotes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm90ZXNcTGlzdFZvdGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elias/C\#Practices/itlaFinalProjectP2/VoteLine/VoteLine.Web/Views/Votes/ListVotes1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm90ZXNcTGlzdFZvdGVzMS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/elias/C\#Practices/itlaFinalProjectP2/VoteLine/VoteLine.Web/Views/_ViewImports.cshtml]

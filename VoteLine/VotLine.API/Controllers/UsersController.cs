@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using VoteLine.API.Dtos;
@@ -40,6 +41,7 @@ namespace VoteLine.API.Controllers
             return userDb;
         }
 
+
         [HttpPost("AddUser")]
         public async Task<ActionResult<User>> AddUser(NewUserRequest request)
         {
@@ -63,9 +65,16 @@ namespace VoteLine.API.Controllers
             //return Ok(userDb);
         }
 
-        [HttpPut("UpdateUser")]
-        public async Task<IActionResult> UpdateUsers(int id, [FromBody] NewUserRequest request)
+
+        [HttpPut("UpdateUser/{id}")]
+        public async Task<IActionResult> UpdateUser(int id, [FromBody] NewUserRequest request)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Invalid data.");
+            }
+
+
             var userDb = await _context.Users.FindAsync(id);
             if (userDb == null)
             {
@@ -77,6 +86,7 @@ namespace VoteLine.API.Controllers
             userDb.Password = request.Password;
             userDb.DNI = request.DNI;
 
+            _context.Users.Update(userDb);
             await _context.SaveChangesAsync();
             return NoContent();
         }
@@ -111,5 +121,31 @@ namespace VoteLine.API.Controllers
 
             return NoContent();
         }
+
+
+        //[HttpPost("Login")]
+        //public async Task<IActionResult> Login([FromBody] LoginRequest request)
+        //{
+        //    if (string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Password))
+        //    {
+        //        return BadRequest("Email and Password are required.");
+        //    }
+
+        //    var userDb = await _context.Users
+        //        .FirstOrDefaultAsync(u => u.Email == request.Email && u.Password == request.Password);
+
+        //    if (userDb == null)
+        //    {
+        //        return Unauthorized("Invalid email or password.");
+        //    }
+
+        //    return Ok(new
+        //    {
+        //        userDb.UserId,
+        //        userDb.FullName,
+        //        userDb.Email,
+        //        userDb.IsAdmin
+        //    });
+        }
     }
-}
+
