@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\voteline.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|solutionrelative:voteline.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\voteline.web\\views\\access\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|solutionrelative:voteline.web\\views\\access\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\voteline.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|solutionrelative:voteline.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4E5A627-F3F1-402A-AFE7-9B8EF15D2DF0}|VotLine.API\\VoteLine.API.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\votline.api\\dtos\\newuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4E5A627-F3F1-402A-AFE7-9B8EF15D2DF0}|VotLine.API\\VoteLine.API.csproj|solutionrelative:votline.api\\dtos\\newuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\voteline.web\\controllers\\candidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|solutionrelative:voteline.web\\controllers\\candidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{18EB943F-130B-44BA-94D9-8204FB2A5FDB}|VotLine.Domain\\VoteLine.Domain.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\votline.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18EB943F-130B-44BA-94D9-8204FB2A5FDB}|VotLine.Domain\\VoteLine.Domain.csproj|solutionrelative:votline.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4E5A627-F3F1-402A-AFE7-9B8EF15D2DF0}|VotLine.API\\VoteLine.API.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\votline.api\\controllers\\candidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4E5A627-F3F1-402A-AFE7-9B8EF15D2DF0}|VotLine.API\\VoteLine.API.csproj|solutionrelative:votline.api\\controllers\\candidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4E5A627-F3F1-402A-AFE7-9B8EF15D2DF0}|VotLine.API\\VoteLine.API.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\votline.api\\controllers\\votescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4E5A627-F3F1-402A-AFE7-9B8EF15D2DF0}|VotLine.API\\VoteLine.API.csproj|solutionrelative:votline.api\\controllers\\votescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\voteline.web\\views\\votes\\listvotes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|solutionrelative:voteline.web\\views\\votes\\listvotes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\voteline.web\\views\\candidates\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|solutionrelative:voteline.web\\views\\candidates\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|c:\\users\\elias\\c#practices\\itlafinalprojectp2\\voteline\\voteline.web\\views\\candidates\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBCA5EB-5F2E-4DC0-ADF9-658420F32A28}|VoteLine.Web\\VoteLine.Web.csproj|solutionrelative:voteline.web\\views\\candidates\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,63 +42,112 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VotLine.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "VotLine.Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VotLine.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "VotLine.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T15:03:52.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "NewUserRequest.cs",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VotLine.API\\Dtos\\NewUserRequest.cs",
+              "RelativeDocumentMoniker": "VotLine.API\\Dtos\\NewUserRequest.cs",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VotLine.API\\Dtos\\NewUserRequest.cs",
+              "RelativeToolTip": "VotLine.API\\Dtos\\NewUserRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T15:03:36.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "List.cshtml",
               "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Access\\List.cshtml",
               "RelativeDocumentMoniker": "VoteLine.Web\\Views\\Access\\List.cshtml",
               "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Access\\List.cshtml",
               "RelativeToolTip": "VoteLine.Web\\Views\\Access\\List.cshtml",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAIEAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAGsAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T02:58:04.845Z",
+              "WhenOpened": "2024-12-07T14:58:18.281Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "VoteLine.Web\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Home\\Index.cshtml*",
-              "RelativeToolTip": "VoteLine.Web\\Views\\Home\\Index.cshtml*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAwCgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T02:57:44.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "VoteLine.Web\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "VoteLine.Web\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBAAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "VotesController.cs",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VotLine.API\\Controllers\\VotesController.cs",
+              "RelativeDocumentMoniker": "VotLine.API\\Controllers\\VotesController.cs",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VotLine.API\\Controllers\\VotesController.cs",
+              "RelativeToolTip": "VotLine.API\\Controllers\\VotesController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAArwDIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T01:39:36.434Z",
+              "WhenOpened": "2024-12-07T14:13:56.782Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "CandidatesController.cs",
-              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Controllers\\CandidatesController.cs",
-              "RelativeDocumentMoniker": "VoteLine.Web\\Controllers\\CandidatesController.cs",
-              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Controllers\\CandidatesController.cs",
-              "RelativeToolTip": "VoteLine.Web\\Controllers\\CandidatesController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwA8AAAALAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VotLine.API\\Controllers\\CandidatesController.cs",
+              "RelativeDocumentMoniker": "VotLine.API\\Controllers\\CandidatesController.cs",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VotLine.API\\Controllers\\CandidatesController.cs",
+              "RelativeToolTip": "VotLine.API\\Controllers\\CandidatesController.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAcwF0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T01:39:35.59Z",
+              "WhenOpened": "2024-12-07T13:49:11.769Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Candidates\\Edit.cshtml",
+              "RelativeDocumentMoniker": "VoteLine.Web\\Views\\Candidates\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Candidates\\Edit.cshtml",
+              "RelativeToolTip": "VoteLine.Web\\Views\\Candidates\\Edit.cshtml",
+              "ViewState": "AgIAANsAAAAAAAAAAAAAAJQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T13:47:35.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ListVotes.cshtml",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Votes\\ListVotes.cshtml",
+              "RelativeDocumentMoniker": "VoteLine.Web\\Views\\Votes\\ListVotes.cshtml",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Votes\\ListVotes.cshtml",
+              "RelativeToolTip": "VoteLine.Web\\Views\\Votes\\ListVotes.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T14:03:04.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Candidates\\Create.cshtml",
+              "RelativeDocumentMoniker": "VoteLine.Web\\Views\\Candidates\\Create.cshtml",
+              "ToolTip": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\Views\\Candidates\\Create.cshtml",
+              "RelativeToolTip": "VoteLine.Web\\Views\\Candidates\\Create.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAEcAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T03:31:58.418Z"
             }
           ]
         }

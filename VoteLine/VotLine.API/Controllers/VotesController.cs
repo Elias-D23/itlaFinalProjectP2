@@ -45,8 +45,9 @@ namespace VoteLine.API.Controllers
             var results = await _context.Votes
                 .GroupBy(v => v.CandidateId)
                 .Select(group => new
-                {
+                {   id = group.FirstOrDefault().CandidateId,
                     CandidateName = group.FirstOrDefault().Candidate.FullName,
+                    CandidatePosition = group.FirstOrDefault().Candidate.Position,
                     VoteCount = group.Count()
                 })
                 .ToListAsync();

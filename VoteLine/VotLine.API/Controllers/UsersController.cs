@@ -45,19 +45,20 @@ namespace VoteLine.API.Controllers
         [HttpPost("AddUser")]
         public async Task<ActionResult<User>> AddUser(NewUserRequest request)
         {
-            //if (string.IsNullOrEmpty(request.FullName) ||
-            //    string.IsNullOrEmpty(request.Email) ||
-            //    string.IsNullOrEmpty(request.Password) ||
-            //    string.IsNullOrEmpty(request.DNI))
-            //{
-            //    return BadRequest("All fields are required.");
-            //}
+            if (string.IsNullOrEmpty(request.FullName) ||
+                string.IsNullOrEmpty(request.Email) ||
+                string.IsNullOrEmpty(request.Password) ||
+                string.IsNullOrEmpty(request.DNI))
+            {
+                return BadRequest("All fields are required.");
+            }
             var userDb = new User();
 
             userDb.FullName = request.FullName;
             userDb.Password = request.Password;
             userDb.DNI = request.DNI;
             userDb.Email = request.Email;
+            userDb.HasVoted = request.HasVoted;
 
             _context.Users.Add(userDb);
             await _context.SaveChangesAsync();
@@ -122,30 +123,6 @@ namespace VoteLine.API.Controllers
             return NoContent();
         }
 
-
-        //[HttpPost("Login")]
-        //public async Task<IActionResult> Login([FromBody] LoginRequest request)
-        //{
-        //    if (string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Password))
-        //    {
-        //        return BadRequest("Email and Password are required.");
-        //    }
-
-        //    var userDb = await _context.Users
-        //        .FirstOrDefaultAsync(u => u.Email == request.Email && u.Password == request.Password);
-
-        //    if (userDb == null)
-        //    {
-        //        return Unauthorized("Invalid email or password.");
-        //    }
-
-        //    return Ok(new
-        //    {
-        //        userDb.UserId,
-        //        userDb.FullName,
-        //        userDb.Email,
-        //        userDb.IsAdmin
-        //    });
-        }
     }
+}
 

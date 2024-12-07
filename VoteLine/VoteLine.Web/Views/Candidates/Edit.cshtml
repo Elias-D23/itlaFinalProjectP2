@@ -1,4 +1,303 @@
 ﻿@{
+    ViewData["Title"] = "Edit Candidate";
+}
+
+<h1>Edit Candidate</h1>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <form id="updateCandidateForm">
+                    <input class="form-control" id="candidateId" hidden>
+                    <div class="form-group">
+                        <label for="fullNameInput">Complete Name:</label>
+                        <input class="form-control" id="fullNameInput" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="partyInput">Party:</label>
+                        <input class="form-control" id="partyInput" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="positionInput">Position:</label>
+                        <input class="form-control" id="positionInput" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageInput">Profile Picture:</label>
+                        <input class="form-control" type="file" id="imageInput" accept="image/*">
+                        <!-- Image preview -->
+                        <img id="previewImage" src="" alt="Image Preview" style="max-width: 100%; height: auto; display: none; margin-top: 10px;" />
+                    </div>
+                    <div class="form-group mt-3">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" id="deleteCandidateButton" class="btn btn-danger">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="ListCandidates">Back to List</a>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            let base64Image = ''; // Variable para almacenar la imagen en Base64
+
+            // Function to get Candidate ID from URL
+            function getCandidateIdFromUrl() {
+                const urlSegments = window.location.pathname.split('/');
+                const candidateId = urlSegments[urlSegments.length - 1]; // Last segment of the URL
+                return candidateId;
+            }
+
+            // Get the Candidate ID
+            const candidateId = getCandidateIdFromUrl();
+
+            // Validate if the ID exists
+            if (!candidateId || isNaN(candidateId)) {
+                console.error('Candidate ID not found or invalid in URL');
+                alert('Invalid Candidate ID. Please contact support.');
+                return;
+            }
+
+            // Fetch the candidate data from the API
+            $.ajax({
+                url: `https://localhost:7065/Candidates/GetCandidate/${candidateId}`,
+                type: 'GET',
+                success: function (data) {
+                    // Map the API data to the form fields
+                    $('#candidateId').val(data.candidateId);
+                    $('#fullNameInput').val(data.fullName);
+                    $('#partyInput').val(data.party);
+                    $('#positionInput').val(data.position);
+
+                    // Set the image preview
+                    if (data.picture) {
+                        base64Image = data.picture;
+                        $('#previewImage').attr('src', base64Image).show();
+                    }
+                },
+                error: function (error) {
+                    console.error('Error fetching candidate:', error);
+                    alert('Failed to fetch candidate data. Please try again later.');
+                }
+            });
+
+            // Handle form submission for updating the candidate
+            $('#updateCandidateForm').submit(function (e) {
+                e.preventDefault();
+
+                // Create the object with updated data
+                const updatedCandidate = {
+                    fullName: $('#fullNameInput').val(),
+                    party: $('#partyInput').val(),
+                    position: $('#positionInput').val(),
+                    picture: base64Image // Include updated or original Base64 image
+                };
+
+                // Validate the fields
+                if (!updatedCandidate.fullName || !updatedCandidate.party || !updatedCandidate.position || !updatedCandidate.picture) {
+                    alert('All fields are required.');
+                    return;
+                }
+
+                // Disable the button while the request is being processed
+                $('#updateCandidateForm button[type="submit"]').text('Saving...').prop('disabled', true);
+
+                // Send PUT request to the API
+                $.ajax({
+                    url: `https://localhost:7065/Candidates/UpdateCandidate/${candidateId}`,
+                    type: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify(updatedCandidate),
+                    success: function () {
+                        alert('Candidate updated successfully.');
+                        window.location.href = '/Candidates/ListCandidates';
+                    },
+                    error: function (error) {
+                        console.error('Error updating candidate:', error);
+                        alert('Failed to update candidate. Please try again.');
+                    },
+                    complete: function () {
+                        // Restore the button state
+                        $('#updateCandidateForm button[type="submit"]').text('Save').prop('disabled', false);
+                    }
+                });
+            });
+
+            // Handle delete candidate button click
+            $('#deleteCandidateButton').click(function () {
+                if (confirm('Are you sure you want to delete this candidate?')) {
+                    $.ajax({
+                        url: `https://localhost:7065/Candidates/DeleteCandidate/${candidateId}`,
+                        type: 'DELETE',
+                        success: function () {
+                            alert('Candidate deleted successfully.');
+                            window.location.href = '/Candidates/ListCandidates';
+                        },
+                        error: function (error) {
+                            console.error('Error deleting candidate:', error);
+                            alert('Failed to delete candidate. Please try again.');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}
+
+@*
+
+@{
+    ViewData["Title"] = "Edit Candidate";
+}
+
+<h1>Edit Candidate</h1>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <form id="updateCandidateForm">
+                    <input class="form-control" id="candidateId" hidden>
+                    <div class="form-group">
+                        <label for="fullNameInput">Complete Name:</label>
+                        <input class="form-control" id="fullNameInput" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="partyInput">Party:</label>
+                        <input class="form-control" id="partyInput" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="positionInput">Position:</label>
+                        <input class="form-control" id="positionInput" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageInput">Profile Picture:</label>
+                        <input class="form-control" type="file" id="imageInput" accept="image/*">
+                        <!-- Image preview -->
+                        <img id="previewImage" src="" alt="Image Preview" style="max-width: 100%; height: auto; display: none; margin-top: 10px;" />
+                    </div>
+                    <div class="form-group mt-3">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="ListCandidates">Back to List</a>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            let base64Image = ''; // Variable para almacenar la imagen en Base64
+
+            // Function to get Candidate ID from URL
+            function getCandidateIdFromUrl() {
+                const urlSegments = window.location.pathname.split('/');
+                const candidateId = urlSegments[urlSegments.length - 1]; // Last segment of the URL
+                return candidateId;
+            }
+
+            // Get the Candidate ID
+            const candidateId = getCandidateIdFromUrl();
+
+            // Validate if the ID exists
+            if (!candidateId || isNaN(candidateId)) {
+                console.error('Candidate ID not found or invalid in URL');
+                alert('Invalid Candidate ID. Please contact support.');
+                return;
+            }
+
+            // Fetch the candidate data from the API
+            $.ajax({
+                url: `https://localhost:7065/Candidates/GetCandidate/${candidateId}`,
+                type: 'GET',
+                success: function (data) {
+                    // Map the API data to the form fields
+                    $('#candidateId').val(data.candidateId);
+                    $('#fullNameInput').val(data.fullName);
+                    $('#partyInput').val(data.party);
+                    $('#positionInput').val(data.position);
+
+                    // Set the image preview
+                    if (data.picture) {
+                        base64Image = data.picture;
+                        $('#previewImage').attr('src', base64Image).show();
+                    }
+                },
+                error: function (error) {
+                    console.error('Error fetching candidate:', error);
+                    alert('Failed to fetch candidate data. Please try again later.');
+                }
+            });
+
+            // Convert image to Base64 and update the preview
+            $('#imageInput').change(function (event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        base64Image = e.target.result; // Save Base64 image
+                        $('#previewImage').attr('src', base64Image).show(); // Update preview
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Handle form submission for updating the candidate
+            $('#updateCandidateForm').submit(function (e) {
+                e.preventDefault();
+
+                // Create the object with updated data
+                const updatedCandidate = {
+                    fullName: $('#fullNameInput').val(),
+                    party: $('#partyInput').val(),
+                    position: $('#positionInput').val(),
+                    picture: base64Image // Include updated or original Base64 image
+                };
+
+                // Validate the fields
+                if (!updatedCandidate.fullName || !updatedCandidate.party || !updatedCandidate.position || !updatedCandidate.picture) {
+                    alert('All fields are required.');
+                    return;
+                }
+
+                // Disable the button while the request is being processed
+                $('#updateCandidateForm button').text('Saving...').prop('disabled', true);
+
+                // Send PUT request to the API
+                $.ajax({
+                    url: `https://localhost:7065/Candidates/UpdateCandidate/${candidateId}`,
+                    type: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify(updatedCandidate),
+                    success: function () {
+                        alert('Candidate updated successfully.');
+                        window.location.href = '/Candidates/ListCandidates';
+                    },
+                    error: function (error) {
+                        console.error('Error updating candidate:', error);
+                        alert('Failed to update candidate. Please try again.');
+                    },
+                    complete: function () {
+                        // Restore the button state
+                        $('#updateCandidateForm button').text('Save').prop('disabled', false);
+                    }
+                });
+            });
+        });
+    </script>
+}
+*@
+
+
+@*
+@{
     ViewData["Title"] = "Edit";
 }
 
@@ -119,4 +418,4 @@
         });
     </script>
 }
-
+*@

@@ -68,11 +68,13 @@
     .img {
         margin: 2px;
         position: absolute;
+        top: 3px;
     }
 
     img {
-        width: 180px;
+        width: 200px;
         height: 155px;
+        border-radius: 10px;
     }
 
     .info {
@@ -105,21 +107,27 @@
 
                         let candidateCards = '';
                         $.each(data, function (index, candidate) {
+                            // Usa el campo ProfilePicture como fuente de la imagen
+                            const candidateImage = candidate.picture && candidate.picture.startsWith('data:image')
+                                ? candidate.picture // Usar directamente la imagen si está en Base64 con el prefijo
+                                : '/img/default.png'; // Usar una imagen predeterminada si no hay Picture
+
+                            console.log('Candidate Image:', candidateImage);
+
                             candidateCards += `
-                                        <div class="box">
-                                            <div class="img">
-                                                <img src="~/img/img1.png" alt="Candidate Image" />
-                                                <hr/>
-                                                <p>${candidate.fullName}</p>
-                                                <p>${candidate.party}</p>
-                                                <p>${candidate.position}</p>
-                                            </div>
-                                                 <div class="btn-vote">
-                                                 <button class="btn btn-success vote-button" data-candidate-id="${candidate.candidateId}" type="button">Vote</button>
-                                                 <a href="/Candidates/Edit/${candidate.candidateId}" class="btn btn-warning">Edit</a>
-                                                 </div>
-                                         
-                                            </div>`;
+                            <div class="box">
+                                <div class="img">
+                                    <img src="${candidateImage}" alt="Candidate Image" />
+                                    <hr/>
+                                    <p>${candidate.fullName}</p>
+                                    <p>${candidate.party}</p>
+                                    <p>${candidate.position}</p>
+                                </div>
+                                <div class="btn-vote">
+                                    <button class="btn btn-success vote-button" data-candidate-id="${candidate.candidateId}" type="button">Vote</button>
+                                    <button onclick="window.location.href='/Candidates/Edit/${candidate.candidateId}'" class="btn btn-warning">Edit</button>
+                                        </div>
+                            </div>`;
                         });
 
                         $('#candidatesContainer').html(candidateCards);
@@ -168,6 +176,35 @@
 
 
 @*
+const candidateImage = candidate.Picture
+                                ? candidate.Picture // Si hay una imagen, úsala
+                                : '~/img/default.png'; // Imagen por defecto en caso de que no exista
+
+
+                        // let candidateCards = '';
+                        // $.each(data, function (index, candidate) {
+                        //     candidateCards += `
+                        //                 <div class="box">
+                        //                     <div class="img">
+                        //                         <img src="~/img/img1.png" alt="Candidate Image" />
+                        //                         <hr/>
+                        //                         <p>${candidate.fullName}</p>
+                        //                         <p>${candidate.party}</p>
+                        //                         <p>${candidate.position}</p>
+                        //                     </div>
+                        //                          <div class="btn-vote">
+                        //                          <button class="btn btn-success vote-button" data-candidate-id="${candidate.candidateId}" type="button">Vote</button>
+                        //                          <a href="/Candidates/Edit/${candidate.candidateId}" class="btn btn-warning">Edit</a>
+                        //                          </div>
+
+                        //                     </div>`;
+                        // });
+
+
+
+
+
+
 
 <div class="btn-vote">
                                                 <form action="https:localhost:7057/Votes/ListVotes" method="post">

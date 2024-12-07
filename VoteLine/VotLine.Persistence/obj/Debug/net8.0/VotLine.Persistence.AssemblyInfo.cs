@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VotLine.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb0d4683b243fd98e61000de3041d79c30736b92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71c7a587cc27c4e6dc709ccb514182521a657bcd")]
 [assembly: System.Reflection.AssemblyProductAttribute("VotLine.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VotLine.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

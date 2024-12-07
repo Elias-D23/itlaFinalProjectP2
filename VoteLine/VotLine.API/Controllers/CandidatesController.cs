@@ -54,6 +54,7 @@ namespace VoteLine.API.Controllers
             candidateDb.FullName = request.FullName;
             candidateDb.Party = request.Party;
             candidateDb.Position = request.Position;
+            candidateDb.Picture = request.Picture;
 
             _context.Candidates.Add(candidateDb);
             await _context.SaveChangesAsync();
@@ -79,6 +80,7 @@ namespace VoteLine.API.Controllers
             candidateDb.FullName = request.FullName;
             candidateDb.Party = request.Party;
             candidateDb.Position = request.Position;
+            candidateDb.Picture = request.Picture;
 
             _context.Candidates.Update(candidateDb);
             await _context.SaveChangesAsync();

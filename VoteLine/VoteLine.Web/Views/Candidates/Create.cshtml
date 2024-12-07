@@ -25,6 +25,11 @@
                 <label for="positionInput">Position:</label>
                 <input class="form-control" id="positionInput" required>
             </div>
+            <!-- Input para cargar la imagen -->
+            <label for="imageInput" class="form-label">Upload Profile Picture:</label>
+            <input class="form-control mb-3" type="file" id="imageInput" accept="image/*" />
+            <!-- Imagen de previsualización -->
+            <img id="previewImage" src="" alt="Image Preview" style="max-width: 100%; height: auto; display: none; margin-bottom: 15px;" />
             <div class="form-group mt-3">
                 <button type="submit" class="btn btn-primary">Save</button>
             </div>
@@ -33,17 +38,41 @@
 </div>
 
 @section Scripts {
+
     <script>
         $(document).ready(function () {
+            let base64Image = ''; // Variable para almacenar la imagen en Base64
+
+            // Convertir la imagen a Base64 al seleccionarla
+            $('#imageInput').change(function (event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        base64Image = e.target.result; // Guardar la imagen en Base64
+                        $('#previewImage').attr('src', base64Image).show(); // Mostrar la previsualización
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Manejar el envío del formulario
             $('#createCandidateForm').submit(function (e) {
                 e.preventDefault();
 
                 // Capturar los datos del formulario
-                var newCandidate = {
+                const newCandidate = {
                     FullName: $('#fullNameInput').val(),
                     Party: $('#partyInput').val(),
-                    Position: $('#positionInput').val()
+                    Position: $('#positionInput').val(),
+                    Picture: base64Image // Cambia "Picture" a "ProfilePicture" si ese es el nombre usado en tu modelo y API
                 };
+
+                // Validar si hay datos en los campos
+                if (!newCandidate.FullName || !newCandidate.Party || !newCandidate.Position || !newCandidate.Picture) {
+                    alert("All fields are required, including the profile picture.");
+                    return;
+                }
 
                 // Realizar la solicitud AJAX
                 $.ajax({
@@ -53,7 +82,7 @@
                     data: JSON.stringify(newCandidate),
                     success: function (data) {
                         alert('Candidate added successfully with ID: ' + data.candidateId);
-                        // Redirigir o limpiar el formulario
+                        // Redirigir a la lista de candidatos
                         window.location.href = 'ListCandidates';
                     },
                     error: function (xhr, status, error) {
@@ -64,4 +93,53 @@
             });
         });
     </script>
-}
+
+     <script>
+         // $(document).ready(function () {
+         //     let base64Image = ''; Variable para almacenar la imagen en Base64
+
+         //     Convertir la imagen a Base64 al seleccionarla
+         //     $('#imageInput').change(function (event) {
+         //         const file = event.target.files[0];
+         //         if (file) {
+         //             const reader = new FileReader();
+         //             reader.onload = function (e) {
+         //                 base64Image = e.target.result; Guardar la imagen en Base64
+         //                 $('#previewImage').attr('src', base64Image).show(); Mostrar la previsualización
+         //             };
+         //             reader.readAsDataURL(file);
+         //         }
+         //     });
+
+         // $(document).ready(function () {
+         //     $('#createCandidateForm').submit(function (e) {
+         //         e.preventDefault();
+
+         //         Capturar los datos del formulario
+         //         var newCandidate = {
+         //             FullName: $('#fullNameInput').val(),
+         //             Party: $('#partyInput').val(),
+         //             Position: $('#positionInput').val(),
+         //             Picture: base64Image
+         //         };
+
+         //         Realizar la solicitud AJAX
+         //         $.ajax({
+         //             url: 'https:localhost:7065/Candidates/AddCandidate',
+         //             type: 'POST',
+         //             contentType: 'application/json',
+         //             data: JSON.stringify(newCandidate),
+         //             success: function (data) {
+         //                 alert('Candidate added successfully with ID: ' + data.candidateId);
+         //                 Redirigir o limpiar el formulario
+         //                 window.location.href = 'ListCandidates';
+         //             },
+         //             error: function (xhr, status, error) {
+         //                 console.error('Error:', xhr.responseText || error);
+         //                 alert('Failed to register candidate. Please try again.');
+         //             }
+         //         });
+         //     });
+         // });
+     </script>
+ }

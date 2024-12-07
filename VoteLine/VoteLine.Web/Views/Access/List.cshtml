@@ -19,6 +19,7 @@
                     <th>Nombre Completo</th>
                     <th>DNI</th>
                     <th>Gmail</th>
+                    <th>Vote</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -104,7 +105,7 @@
                     var tableBody = '';
 
                     if (data.length === 0) {
-                        tableBody = '<tr> <td colspan="5">No Records found</td> </tr>';
+                        tableBody = '<tr> <td colspan="6">No Records found</td> </tr>';
                     } else {
                         $.each(data, function (index, user) {
                             tableBody += '<tr>' +
@@ -112,6 +113,7 @@
                                 '<td>' + user.fullName + '</td>' +
                                 '<td>' + user.dni + '</td>' +
                                 '<td>' + user.email + '</td>' +
+                                '<td>' + user.hasVoted + '</td>' +
                                 '<td>' +
                                 '<a class="btn btn-warning edit-user" data-id="' + user.userId + '">Edit</a>' +
                                 ' ' +
