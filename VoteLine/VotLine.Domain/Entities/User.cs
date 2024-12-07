@@ -13,6 +13,6 @@ namespace VoteLine.Domain.Entities
         public string DNI { get; set; }
         public bool HasVoted { get; set; }
 
-        //public ICollection<Vote>? Votes { get; set; }
+        public ICollection<Vote>? Votes { get; set; }
     }
 }

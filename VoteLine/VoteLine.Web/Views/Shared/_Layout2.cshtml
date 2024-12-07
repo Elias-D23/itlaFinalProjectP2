@@ -25,20 +25,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Access" asp-action="List">List</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Close">Close</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Candidates" asp-action="Create">Candidates</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Candidates" asp-action="ListCandidates">List Candidates</a>
-                        </li>
+                        <div class="dropdown">
+                            <button class="btn btn-light" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Voting
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" type="button" class="nav-link text-dark" asp-area="" asp-controller="Candidates" asp-action="Create">Create</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" type="button" class="nav-link text-dark" asp-area="" asp-controller="Candidates" asp-action="ListCandidates">List Candidates</a>
+                                </li>
+                            </ul>
+                        </div>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Votes" asp-action="ListVotes">General</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Votes" asp-action="ListVotes1">General1</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Close">Close</a>
                         </li>
                     </ul>
                 </div>

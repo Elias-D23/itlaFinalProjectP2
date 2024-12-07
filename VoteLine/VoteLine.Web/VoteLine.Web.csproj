@@ -21,10 +21,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Views\Votes\ListVotes1.cshtml">
+    <Content Update="Views\Votes\ListVotes.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\ViewModels\" />
   </ItemGroup>
 
 </Project>

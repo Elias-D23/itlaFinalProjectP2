@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VoteLine.API.Dtos
+namespace VoteLine.Common.Requests
 
 {
     public class NewUserRequest
@@ -9,7 +9,8 @@ namespace VoteLine.API.Dtos
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
         public string DNI { get; set; }
-        public bool HasVoted { get; set; }
+        public bool HasVoted { get; set; } = false;
+
 
 
     }

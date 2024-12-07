@@ -9,13 +9,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "VoteLine.API.Dtos.NewCandidateRequest",
+        "Type": "VoteLine.Common.Requests.NewCandidateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "VoteLine.Domain.Entities.Candidate",
+        "Type": "VoteLine.Common.Responses.NewCandidateResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -57,7 +57,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "VoteLine.Domain.Entities.Candidate",
+        "Type": "VoteLine.Common.Dtos.CandidateDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -77,7 +77,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[VoteLine.Domain.Entities.Candidate, VoteLine.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[VoteLine.Common.Dtos.CandidateDto, VotLine.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -102,7 +102,7 @@
       },
       {
         "Name": "request",
-        "Type": "VoteLine.API.Dtos.NewCandidateRequest",
+        "Type": "VoteLine.Common.Requests.NewCandidateRequest",
         "IsRequired": true
       }
     ],
@@ -118,13 +118,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "VoteLine.API.Dtos.NewUserRequest",
+        "Type": "VoteLine.Common.Requests.NewUserRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "VoteLine.Domain.Entities.User",
+        "Type": "VotLine.Common.Responses.NewUserResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -136,8 +136,8 @@
   },
   {
     "ContainingType": "VoteLine.API.Controllers.UsersController",
-    "Method": "DeleteUsers",
-    "RelativePath": "Users/DeleteUsers/{id}",
+    "Method": "DeleteUser",
+    "RelativePath": "Users/DeleteUser/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -166,7 +166,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "VoteLine.Domain.Entities.User",
+        "Type": "VoteLine.Common.Dtos.UserDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -186,7 +186,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[VoteLine.Domain.Entities.User, VoteLine.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[VoteLine.Common.Dtos.UserDto, VotLine.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -211,7 +211,7 @@
       },
       {
         "Name": "request",
-        "Type": "VoteLine.API.Dtos.NewUserRequest",
+        "Type": "VoteLine.Common.Requests.NewUserRequest",
         "IsRequired": true
       }
     ],

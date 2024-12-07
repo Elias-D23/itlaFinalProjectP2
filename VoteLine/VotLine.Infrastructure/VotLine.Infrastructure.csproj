@@ -10,4 +10,9 @@
     <Folder Include="Context\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VotLine.Common\VotLine.Common.csproj" />
+    <ProjectReference Include="..\VotLine.Persistence\VotLine.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>

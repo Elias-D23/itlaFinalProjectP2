@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using VoteLine.Domain;
 using VoteLine.Persistence;
+using VotLine.Infrastructure.Interfaces;
+using VotLine.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,10 @@ builder.Services.AddDbContext<VoteLineDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionSQL"));
 });
+
+builder.Services.AddTransient<IUserRepository,UserRepository>();
+builder.Services.AddTransient<ICandidateRepository,CandidateRepository>();
+builder.Services.AddTransient<IVoteRepository, VoteRepository>();
 
 //builder.Services.AddCors(options =>
 //{

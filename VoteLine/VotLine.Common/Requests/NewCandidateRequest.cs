@@ -1,4 +1,4 @@
-﻿namespace VoteLine.API.Dtos
+﻿namespace VoteLine.Common.Requests
 {
     public class NewCandidateRequest
     {

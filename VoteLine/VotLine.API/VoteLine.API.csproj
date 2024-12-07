@@ -19,7 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\VotLine.Common\VotLine.Common.csproj" />
     <ProjectReference Include="..\VotLine.Domain\VoteLine.Domain.csproj" />
+    <ProjectReference Include="..\VotLine.Infrastructure\VotLine.Infrastructure.csproj" />
     <ProjectReference Include="..\VotLine.Persistence\VotLine.Persistence.csproj" />
   </ItemGroup>
 

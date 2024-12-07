@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System;
-using VoteLine.Web.Models.ViewModels;
 using System.Formats.Asn1;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -15,7 +14,6 @@ using VoteLine.Persistence;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
-using VoteLine.Web.Models;
 
 namespace VoteLine.Web.Controllers
 {   public class AccessController : Controller

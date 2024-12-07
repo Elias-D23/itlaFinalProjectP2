@@ -2,10 +2,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
-using VoteLine.API.Dtos;
+using VoteLine.Common.Requests;
+using VoteLine.Common.Dtos;
 using VoteLine.Domain;
 using VoteLine.Domain.Entities;
 using VoteLine.Persistence;
+using VotLine.Infrastructure.Repositories;
+using VotLine.Common.Responses;
+using VotLine.Infrastructure.Interfaces;
 
 namespace VoteLine.API.Controllers
 {
@@ -13,37 +17,41 @@ namespace VoteLine.API.Controllers
     [Route("[Controller]")]
     public class UsersController : ControllerBase
     {
-        private readonly VoteLineDbContext _context;
+        private readonly IUserRepository _repo;
 
-        public UsersController(VoteLineDbContext context)
+        public UsersController(IUserRepository repo)
         {
-            _context = context;
+            _repo = repo;
         }
 
         [HttpGet("GetUsers")]
-        public async Task<ActionResult<List<User>>> GetUsers()
+        public async Task<ActionResult<List<UserDto>>> GetUsers()
         {
-            return await _context.Users.ToListAsync();
+            var users = await _repo.GetUsers();
+            if (!users.Any())
+                return NotFound("No data Found");
+
+            return users;
         }
 
         [HttpGet("GetUser/{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
+        public async Task<ActionResult<UserDto>> GetUser(int id)
         {
             if (id == 0)
                 return BadRequest("You need to give me a valid Id");
 
-            var userDb = await _context.Users.FindAsync(id);
-            if (userDb == null)
+            var userDto = await _repo.GetUser(id);
+            if (userDto == null)
             {
                 return NotFound();
             }
 
-            return userDb;
+            return userDto;
         }
 
 
         [HttpPost("AddUser")]
-        public async Task<ActionResult<User>> AddUser(NewUserRequest request)
+        public async Task<ActionResult<NewUserResponse>> AddUser(NewUserRequest request)
         {
             if (string.IsNullOrEmpty(request.FullName) ||
                 string.IsNullOrEmpty(request.Email) ||
@@ -52,20 +60,10 @@ namespace VoteLine.API.Controllers
             {
                 return BadRequest("All fields are required.");
             }
-            var userDb = new User();
 
-            userDb.FullName = request.FullName;
-            userDb.Password = request.Password;
-            userDb.DNI = request.DNI;
-            userDb.Email = request.Email;
-            userDb.HasVoted = request.HasVoted;
-
-            _context.Users.Add(userDb);
-            await _context.SaveChangesAsync();
-            return userDb;
+            return await _repo.AddUser(request);
             //return Ok(userDb);
         }
-
 
         [HttpPut("UpdateUser/{id}")]
         public async Task<IActionResult> UpdateUser(int id, [FromBody] NewUserRequest request)
@@ -75,50 +73,23 @@ namespace VoteLine.API.Controllers
                 return BadRequest("Invalid data.");
             }
 
-
-            var userDb = await _context.Users.FindAsync(id);
-            if (userDb == null)
+            var success = await _repo.UpdateUser(id, request);
+            if (!success)
             {
-                return NotFound();
+                return NotFound("User not found.");
             }
 
-            userDb.FullName = request.FullName;
-            userDb.Email = request.Email;
-            userDb.Password = request.Password;
-            userDb.DNI = request.DNI;
-
-            _context.Users.Update(userDb);
-            await _context.SaveChangesAsync();
             return NoContent();
         }
 
-        //[HttpDelete("DeleteUsers")]
-        //public async Task<IActionResult> DeleteUsers(int id)
-        //{
-        //    var user = await _context.Users.FindAsync(id);
-        //    if (user == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    _context.Users.Remove(user);
-        //    await _context.SaveChangesAsync();
-        //    return NoContent();
-        //}
-
-
-        [HttpDelete("DeleteUsers/{id}")]
-        public async Task<IActionResult> DeleteUsers(int id)
+        [HttpDelete("DeleteUser/{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
         {
-            var userDb = await _context.Users.FindAsync(id);
-
-            if (userDb == null)
+            var success = await _repo.DeleteUser(id);
+            if (!success)
             {
-                return NotFound();
+                return NotFound("User not found.");
             }
-
-            _context.Users.Remove(userDb);
-            await _context.SaveChangesAsync();
 
             return NoContent();
         }

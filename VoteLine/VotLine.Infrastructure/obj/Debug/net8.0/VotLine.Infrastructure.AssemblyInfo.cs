@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VotLine.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e42b891f031871010c000b1b946106e23355eb37")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+512e67ab760fedddb081671af9361b63a1886ee2")]
 [assembly: System.Reflection.AssemblyProductAttribute("VotLine.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VotLine.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

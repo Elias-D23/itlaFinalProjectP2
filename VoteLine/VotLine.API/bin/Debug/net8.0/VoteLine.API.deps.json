@@ -11,6 +11,8 @@
           "Microsoft.EntityFrameworkCore.Design": "8.0.10",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.10",
           "Swashbuckle.AspNetCore": "6.6.2",
+          "VotLine.Common": "1.0.0",
+          "VotLine.Infrastructure": "1.0.0",
           "VotLine.Persistence": "1.0.0",
           "VoteLine.Domain": "1.0.0"
         },
@@ -947,6 +949,26 @@
           }
         }
       },
+      "VotLine.Common/1.0.0": {
+        "runtime": {
+          "VotLine.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "VotLine.Infrastructure/1.0.0": {
+        "dependencies": {
+          "VotLine.Common": "1.0.0",
+          "VotLine.Persistence": "1.0.0"
+        },
+        "runtime": {
+          "VotLine.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "VotLine.Persistence/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.10",
@@ -1543,6 +1565,16 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "VoteLine.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VotLine.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VotLine.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,48 +1,154 @@
-﻿@if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+﻿@{
+    Layout = "_Layout2";
 }
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+@{
+    ViewData["Title"] = "List Votes";
 }
-@if (TempData["InfoMessage"] != null)
-{
-    <div class="alert alert-info">@TempData["InfoMessage"]</div>
-}
-<table class="table">
+
+<html>
+<h1>Resultados de la Votación</h1>
+
+<!-- Tabla de resultados -->
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>ID</th>
-            <th>Usuario</th>
-            <th>Email</th>
-            <th>Candidato</th>
-            <th>Partido</th>
-            <th>Posición</th>
-            <th>Fecha de Voto</th>
-            <th>Acciones</th>
+            <th>Nombre del Candidato</th>
+            <th>Postion</th>
+            <th>Número de Votos</th>
+
         </tr>
     </thead>
-    <tbody>
-        @foreach (var vote in Model)
-        {
-            <tr>
-                <td>@vote.VoteId</td>
-                <td>@vote.UserName</td>
-                <td>@vote.UserEmail</td>
-                <td>@vote.CandidateName</td>
-                <td>@vote.CandidateParty</td>
-                <td>@vote.CandidatePosition</td>
-                <td>@vote.VoteDate</td>
-                <td>
-                    @*  <a href="@Url.Action("EditVote", new { voteId = vote.VoteId })" class="btn btn-warning">Editar</a> *@
-                    <a href="@Url.Action("DeleteVote", new { voteId = vote.VoteId })" onclick="return confirm('Are you sure you want to remove it?')" class="btn btn-danger">Eliminar</a>
-                </td>
-            </tr>
-        }
+    <tbody id="resultsTableBody">
+        <!-- Aquí se cargarán los resultados dinámicamente -->
     </tbody>
 </table>
 
+<!-- Contenedor para la gráfica -->
+<div id="container" style="width: 100%; height: 400px; margin-top: 30px;"></div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            function loadResults() {
+                $.ajax({
+                    url: 'https://localhost:7065/Votes/GetResults',
+                    type: 'GET',
+                    success: function (data) {
+                        // Generar la tabla
+                        let tableBody = '';
+                        if (data.length === 0) {
+                            tableBody = '<tr><td colspan="3">No hay resultados aún</td></tr>';
+                        } else {
+                            data.forEach(function (result) {
+                                tableBody += `<tr>      <td>${result.id}</td>
+                                                        <td>${result.candidateName}</td>
+                                                        <td>${result.candidatePosition}</td>
+                                                        <td>${result.voteCount}</td>
+                                                    </tr>`;
+                            });
+                        }
+                        $('#resultsTableBody').html(tableBody);
+
+                        // Generar la gráfica
+                        const chartData = data.map(vote => ({
+                            name: vote.candidateName,
+                            y: vote.voteCount
+                        }));
+
+                        Highcharts.chart('container', {
+                            chart: {
+                                type: 'column'
+                            },
+                            title: {
+                                text: 'Votos por Candidato'
+                            },
+                            xAxis: {
+                                type: 'category',
+                                title: {
+                                    text: 'Candidatos'
+                                }
+                            },
+                            yAxis: {
+                                title: {
+                                    text: 'Número de Votos'
+                                }
+                            },
+                            series: [
+                                {
+                                    name: 'Votos',
+                                    colorByPoint: true,
+                                    data: chartData
+                                }
+                            ]
+                        });
+                    },
+                    error: function (error) {
+                        console.error('Error loading results:', error);
+                    }
+                });
+            }
+            loadResults();
+        });
+    </script>
+}
+</html>
+
+
+
+
+@*
+<html>
+<h1>Resultados de la Votación</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre del Candidato</th>
+            <th>Número de Votos</th>
+        </tr>
+    </thead>
+    <tbody id="resultsTableBody">
+        <!-- Aquí se cargarán los resultados dinámicamente -->
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            function loadResults() {
+                $.ajax({
+                    url: 'https://localhost:7065/Votes/GetResults',
+                    type: 'GET',
+                    success: function (data) {
+                        let tableBody = '';
+                        if (data.length === 0) {
+                            tableBody = '<tr><td colspan="2">No hay resultados aún</td></tr>';
+                        } else {
+                            data.forEach(function (result) {
+                                tableBody += `<tr>
+                                                <td>${result.candidateName}</td>
+                                                <td>${result.voteCount}</td>
+                                            </tr>`;
+                            });
+                        }
+                        $('#resultsTableBody').html(tableBody);
+                    },
+                    error: function (error) {
+                        console.error('Error loading results:', error);
+                    }
+                });
+            }
+            loadResults();
+        });
+    </script>
+}
+</html>
 
 @section Scripts{
 
@@ -95,3 +201,4 @@
 <div id="container"></div>
 
 
+*@

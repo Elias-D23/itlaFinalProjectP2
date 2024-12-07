@@ -18,7 +18,7 @@ namespace VoteLine.Web.Controllers
         //    _Dbcontext = context;
         //}
 
-        public ActionResult ListVotes1() { 
+        public ActionResult ListVotes() { 
         
             return View();
         }

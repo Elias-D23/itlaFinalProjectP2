@@ -10,3 +10,11 @@ C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Infrastructure\ob
 C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Infrastructure\obj\Debug\net8.0\refint\VotLine.Infrastructure.dll
 C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Infrastructure\obj\Debug\net8.0\VotLine.Infrastructure.pdb
 C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Infrastructure\obj\Debug\net8.0\ref\VotLine.Infrastructure.dll
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Infrastructure\bin\Debug\net8.0\VoteLine.Domain.dll
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Infrastructure\bin\Debug\net8.0\VotLine.Common.dll
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Infrastructure\bin\Debug\net8.0\VotLine.Persistence.dll
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Infrastructure\bin\Debug\net8.0\VotLine.Common.pdb
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Infrastructure\bin\Debug\net8.0\VotLine.Persistence.pdb
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Infrastructure\bin\Debug\net8.0\VoteLine.Domain.pdb
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Infrastructure\obj\Debug\net8.0\VotLine.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\elias\C#Practices\itlaFinalProjectP2\VoteLine\VotLine.Infrastructure\obj\Debug\net8.0\VotLine..C7BC3405.Up2Date
