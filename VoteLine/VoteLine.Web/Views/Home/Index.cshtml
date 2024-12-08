@@ -5,22 +5,36 @@
     Layout = "_Layout2";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome, <span id="userName">User</span>!</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<body>
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome, <span id="userName">User</span>!</h1>
+        <h3>to our voting system VotLine.</h3>
+
+        <span class="span1">
+            <span class="texi">Your vote, your voice, just a click away.!</span>
+        <hr />
+        </span>
+
+        <div class="logo-index">
+            <img src="~/img/VotLine-Logo.jpg" alt="Logo-VotLine" />
+        </div>
+
+    </div>
+
+</body>
+
 
 @section Scripts {
     <script>
         $(document).ready(function () {
-            const userId = localStorage.getItem('userId'); // Obtener el ID del usuario desde el almacenamiento local
+            const userId = localStorage.getItem('userId');
 
             if (!userId) {
-                $('#userName').text('Guest'); // Si no hay usuario registrado, muestra "Guest"
+                $('#userName').text('Guest'); 
                 return;
             }
 
-            // Llamada a la API para obtener los datos del usuario
             $.ajax({
                 url: `https://localhost:7065/Users/GetUser/${userId}`,
                 type: 'GET',

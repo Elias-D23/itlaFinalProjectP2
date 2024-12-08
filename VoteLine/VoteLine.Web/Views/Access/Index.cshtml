@@ -1,4 +1,20 @@
-﻿@{
+﻿<style>
+
+
+    body {
+        background-color: white;
+    }
+
+    img {
+        width: 450px;
+        height: 360px;
+        border: solid 1px;
+        border-radius: 10px;
+    }
+ 
+</style>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,7 +22,16 @@
     Layout = "_Layout";
 }
 
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to VotLine</h1>
+   
+    <div class="img">
+         <img src="~/img/Vote-Line.jpg" alt="Mi imagen" />
+    </div>
+
 </div>
+
+
+
+

@@ -50,6 +50,7 @@ namespace VotLine.Infrastructure.Repositories
                     Id = group.FirstOrDefault().CandidateId,
                     CandidateName = group.FirstOrDefault().Candidate.FullName,
                     CandidatePosition = group.FirstOrDefault().Candidate.Position,
+                    CandidateParty = group.FirstOrDefault().Candidate.Party,
                     VoteCount = group.Count()
                 })
                 .ToListAsync();

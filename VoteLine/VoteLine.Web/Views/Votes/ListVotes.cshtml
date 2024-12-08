@@ -6,21 +6,21 @@
 }
 
 <html>
-<h1>Resultados de la Votación</h1>
+<h1>Voting results</h1>
 
 <!-- Tabla de resultados -->
 <table class="table table-bordered">
     <thead>
         <tr>
             <th>ID</th>
-            <th>Nombre del Candidato</th>
-            <th>Postion</th>
-            <th>Número de Votos</th>
-
+            <th>Name </th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Number of Votes</th>
         </tr>
     </thead>
     <tbody id="resultsTableBody">
-        <!-- Aquí se cargarán los resultados dinámicamente -->
+
     </tbody>
 </table>
 
@@ -44,12 +44,13 @@
                         // Generar la tabla
                         let tableBody = '';
                         if (data.length === 0) {
-                            tableBody = '<tr><td colspan="3">No hay resultados aún</td></tr>';
+                            tableBody = '<tr><td colspan="5">No hay resultados aún</td></tr>';
                         } else {
                             data.forEach(function (result) {
                                 tableBody += `<tr>      <td>${result.id}</td>
                                                         <td>${result.candidateName}</td>
                                                         <td>${result.candidatePosition}</td>
+                                                        <td>${result.candidateParty}</td>
                                                         <td>${result.voteCount}</td>
                                                     </tr>`;
                             });
@@ -67,22 +68,22 @@
                                 type: 'column'
                             },
                             title: {
-                                text: 'Votos por Candidato'
+                                text: 'Votes per Candidate'
                             },
                             xAxis: {
                                 type: 'category',
                                 title: {
-                                    text: 'Candidatos'
+                                    text: 'Candidates'
                                 }
                             },
                             yAxis: {
                                 title: {
-                                    text: 'Número de Votos'
+                                    text: 'Number of Votes'
                                 }
                             },
                             series: [
                                 {
-                                    name: 'Votos',
+                                    name: 'Votes',
                                     colorByPoint: true,
                                     data: chartData
                                 }
@@ -100,105 +101,3 @@
 }
 </html>
 
-
-
-
-@*
-<html>
-<h1>Resultados de la Votación</h1>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Nombre del Candidato</th>
-            <th>Número de Votos</th>
-        </tr>
-    </thead>
-    <tbody id="resultsTableBody">
-        <!-- Aquí se cargarán los resultados dinámicamente -->
-    </tbody>
-</table>
-
-@section Scripts {
-    <script>
-        $(document).ready(function () {
-            function loadResults() {
-                $.ajax({
-                    url: 'https://localhost:7065/Votes/GetResults',
-                    type: 'GET',
-                    success: function (data) {
-                        let tableBody = '';
-                        if (data.length === 0) {
-                            tableBody = '<tr><td colspan="2">No hay resultados aún</td></tr>';
-                        } else {
-                            data.forEach(function (result) {
-                                tableBody += `<tr>
-                                                <td>${result.candidateName}</td>
-                                                <td>${result.voteCount}</td>
-                                            </tr>`;
-                            });
-                        }
-                        $('#resultsTableBody').html(tableBody);
-                    },
-                    error: function (error) {
-                        console.error('Error loading results:', error);
-                    }
-                });
-            }
-            loadResults();
-        });
-    </script>
-}
-</html>
-
-@section Scripts{
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-  <script>
-        // Obtener los datos desde ViewBag
-        const voteData = @Html.Raw(ViewBag.VoteData);
-
-        // Transformar datos en formato adecuado para Highcharts
-        const chartData = voteData.map(vote => ({
-            name: vote.CandidateName,
-            y: vote.TotalVotes
-        }));
-
-        // Crear la gráfica con los datos de votaciones
-        Highcharts.chart('container', {
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: 'Votos por Candidato'
-            },
-            xAxis: {
-                type: 'category',
-                title: {
-                    text: 'Candidatos'
-                }
-            },
-            yAxis: {
-                title: {
-                    text: 'Número de Votos'
-                }
-            },
-            series: [
-                {
-                    name: 'Votos',
-                    colorByPoint: true,
-                    data: chartData
-                }
-            ]
-        });
-   </script>
-}
-
-<div id="container"></div>
-
-
-*@

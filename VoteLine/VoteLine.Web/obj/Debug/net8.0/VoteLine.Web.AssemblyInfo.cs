@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VoteLine.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+512e67ab760fedddb081671af9361b63a1886ee2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+69c2e92ba66b5369371e7060b1b927f5bef02e6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("VoteLine.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VoteLine.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

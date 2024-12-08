@@ -1,3 +1,4 @@
+
 html {
   font-size: 14px;
 }
@@ -17,6 +18,95 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
+
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+body {
+    margin-bottom: 60px;
+    background-color: #cee1f8;
+}
+
+.bg-my-gray {
+    background-color: white;
+}
+
+.table-bordered {
+    border: 1px solid gray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+th {
+    border: 1px solid gray;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    border-radius:50px;
+}
+
+
+.span1 {
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 38ch;
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    overflow: hidden;
+
+    text-align: center;
+    position: relative;
+    margin: 40px auto;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.texi {
+    font-size: 20px;
+    font-family:'Cambria Math';
+    
+}
+
+.logo-index img {
+
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+
+
+.scale-in-center {
+    animation: scale-in-center 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes scale-in-center {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+

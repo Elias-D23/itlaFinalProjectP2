@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\wwwroot\\img\\VotLine-Logo.jpg",
+      "PackagePath": "staticwebassets\\img\\VotLine-Logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\wwwroot\\img\\Vote-Line.jpg",
+      "PackagePath": "staticwebassets\\img\\Vote-Line.jpg"
+    },
+    {
       "Id": "C:\\Users\\elias\\C#Practices\\itlaFinalProjectP2\\VoteLine\\VoteLine.Web\\wwwroot\\img\\img1.png",
       "PackagePath": "staticwebassets\\img\\img1.png"
     },
